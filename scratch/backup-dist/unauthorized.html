@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>403 Unauthorized | USeP e-Registrar</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #7b1113;
+      --bg: #f9fafb;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --radius: 8px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .error-container {
+      background: var(--surface);
+      padding: 3rem;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 480px;
+      width: 90%;
+      border-top: 4px solid var(--primary);
+    }
+
+    .icon-wrapper {
+      width: 64px;
+      height: 64px;
+      background: #fee2e2;
+      color: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem auto;
+    }
+
+    .icon-wrapper svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 24px;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #640d0f;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      background: #f3f4f6;
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="error-container">
+    <div class="icon-wrapper">
+      <!-- Shield lock icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+        <rect width="8" height="6" x="8" y="10" rx="1"/>
+        <path d="M12 10v-2a2 2 0 1 1 4 0v2"/>
+      </svg>
+    </div>
+    
+    <h1>403 Unauthorized Access</h1>
+    <p>You do not have permission to view this page. Please log in with the appropriate administrative credentials.</p>
+    
+    <div class="btn-group">
+      <a href="login.html" class="btn btn-primary" onclick="window.localStorage.removeItem('currentUserRole');">Go to Login</a>
+      <a href="#" class="btn btn-outline" id="btn-back-student">Return to Student Dashboard</a>
+    </div>
+  </div>
+
+  <script>
+    // Optionally hide the "Return to student dashboard" button if they aren't logged in as a student
+    const role = window.localStorage.getItem('currentUserRole');
+    const studentBtn = document.getElementById('btn-back-student');
+    if (role === 'student') {
+      studentBtn.href = 'student.html';
+    } else {
+      studentBtn.style.display = 'none';
+    }
+  </script>
+
+<script src="portal-interactions.js"></script>
+</body>
+</html>

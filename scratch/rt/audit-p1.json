@@ -1,0 +1,1677 @@
+[
+ {
+  "page": "student.html",
+  "w": 320,
+  "overflow": false,
+  "sw": 320,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 4,
+  "small": [
+   "input[catalog-search] 240x42",
+   "button[close] 18x25",
+   "button[download\nGet PDF] 65x14",
+   "button[View All History] 65x32"
+  ],
+  "fs16": [
+   "input#catalog-search:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "student.html",
+  "w": 390,
+  "overflow": false,
+  "sw": 390,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 4,
+  "small": [
+   "input[catalog-search] 310x42",
+   "button[close] 18x25",
+   "button[download\nGet PDF] 65x14",
+   "button[View All History] 84x32"
+  ],
+  "fs16": [
+   "input#catalog-search:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "student.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 4,
+  "small": [
+   "input[catalog-search] 672x42",
+   "button[close] 18x25",
+   "button[download\nGet PDF] 65x14",
+   "button[View All History] 98x16"
+  ],
+  "fs16": [
+   "input#catalog-search:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "student.html",
+  "w": 1024,
+  "overflow": false,
+  "sw": 1024,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 11,
+  "small": [
+   "a[home\nDashboard] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "input[catalog-search] 245x42",
+   "button[close] 18x25",
+   "button[download\nGet PDF] 41x28",
+   "button[View All History] 98x16"
+  ],
+  "fs16": [
+   "input#catalog-search:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "student.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 11,
+  "small": [
+   "a[home\nDashboard] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "input[catalog-search] 359x42",
+   "button[close] 18x25",
+   "button[download\nGet PDF] 53x28",
+   "button[View All History] 98x16"
+  ],
+  "fs16": [
+   "input#catalog-search:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "document-requests.html",
+  "w": 320,
+  "overflow": false,
+  "sw": 320,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 17,
+  "small": [
+   "button[All Documents (7)] 142x24",
+   "button[Academic Records] 146x24",
+   "input[searchInput] 256x34",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 126x36",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "a[View University Cl] 240x32",
+   "button[Clear All] 51x14",
+   "button[close] 26x33",
+   "select[Employment / Job A] 240x38",
+   "button[GCash] 116x32",
+   "button[Maya] 116x32",
+   "button[LandBank] 116x32",
+   "button[Cashier On-Site] 116x32"
+  ],
+  "fs16": [
+   "input#searchInput:13px",
+   "select#purposeSelect:13px",
+   "textarea#orderNotes:13px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "document-requests.html",
+  "w": 390,
+  "overflow": false,
+  "sw": 390,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 20,
+  "small": [
+   "button[All Documents (7)] 142x24",
+   "button[Academic Records] 146x24",
+   "button[Certifications] 117x24",
+   "input[searchInput] 326x34",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "a[View University Cl] 251x16",
+   "button[Clear All] 51x14",
+   "button[close] 26x33",
+   "select[Employment / Job A] 310x38",
+   "button[storefront\nCampus ] 147x34",
+   "button[local_shipping\nCou] 147x34",
+   "button[GCash] 151x32",
+   "button[Maya] 151x32",
+   "button[LandBank] 151x32",
+   "button[Cashier On-Site] 151x32"
+  ],
+  "fs16": [
+   "input#searchInput:13px",
+   "select#purposeSelect:13px",
+   "textarea#orderNotes:13px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "document-requests.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 21,
+  "small": [
+   "button[All Documents (7)] 142x24",
+   "button[Academic Records] 146x24",
+   "button[Certifications] 117x24",
+   "button[Graduation & Trans] 169x24",
+   "input[searchInput] 704x34",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "a[View University Cl] 251x16",
+   "button[Clear All] 51x14",
+   "button[close] 26x33",
+   "select[Employment / Job A] 688x38",
+   "button[storefront\nCampus ] 336x34",
+   "button[local_shipping\nCou] 336x34",
+   "button[GCash] 340x32",
+   "button[Maya] 340x32",
+   "button[LandBank] 340x32",
+   "button[Cashier On-Site] 340x32"
+  ],
+  "fs16": [
+   "input#searchInput:13px",
+   "select#purposeSelect:13px",
+   "textarea#orderNotes:13px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "document-requests.html",
+  "w": 1024,
+  "overflow": false,
+  "sw": 1024,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 28,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[All Documents (7)] 142x24",
+   "button[Academic Records] 146x24",
+   "button[Certifications] 117x24",
+   "button[Graduation & Trans] 169x24",
+   "input[searchInput] 235x34",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "a[View University Cl] 251x16",
+   "button[Clear All] 51x14",
+   "button[close] 26x33",
+   "select[Employment / Job A] 656x38",
+   "button[storefront\nCampus ] 320x34",
+   "button[local_shipping\nCou] 320x34",
+   "button[GCash] 324x32",
+   "button[Maya] 324x32",
+   "button[LandBank] 324x32",
+   "button[Cashier On-Site] 324x32"
+  ],
+  "fs16": [
+   "input#searchInput:13px",
+   "select#purposeSelect:13px",
+   "textarea#orderNotes:13px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "document-requests.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 26,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[All Documents (7)] 142x24",
+   "button[Academic Records] 146x24",
+   "button[Certifications] 117x24",
+   "button[Graduation & Trans] 169x24",
+   "input[searchInput] 320x34",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "a[View University Cl] 251x16",
+   "button[Clear All] 51x14",
+   "button[close] 26x33",
+   "select[Employment / Job A] 267x38",
+   "button[GCash] 129x32",
+   "button[Maya] 129x32",
+   "button[LandBank] 129x32",
+   "button[Cashier On-Site] 129x32"
+  ],
+  "fs16": [
+   "input#searchInput:13px",
+   "select#purposeSelect:13px",
+   "textarea#orderNotes:13px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "records-correction.html",
+  "w": 320,
+  "overflow": false,
+  "sw": 320,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 7,
+  "small": [
+   "select[Name Spelling / Le] 208x38",
+   "input[text] 84x16",
+   "input[contactNumber] 148x38",
+   "button[visibility] 26x33",
+   "button[delete] 26x33",
+   "input[affirmationCheckbo] 13x16",
+   "button[save\nSave Draft] 208x40"
+  ],
+  "fs16": [
+   "select#correctionCategory:14px",
+   "input#:12px",
+   "input#contactNumber:14px",
+   "textarea#reasonArea:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "records-correction.html",
+  "w": 390,
+  "overflow": false,
+  "sw": 390,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 7,
+  "small": [
+   "select[Name Spelling / Le] 278x38",
+   "input[text] 154x16",
+   "input[contactNumber] 218x38",
+   "button[visibility] 26x33",
+   "button[delete] 26x33",
+   "input[affirmationCheckbo] 13x16",
+   "button[save\nSave Draft] 278x40"
+  ],
+  "fs16": [
+   "select#correctionCategory:14px",
+   "input#:12px",
+   "input#contactNumber:14px",
+   "textarea#reasonArea:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "records-correction.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 8,
+  "small": [
+   "select[Name Spelling / Le] 656x38",
+   "input[text] 196x16",
+   "input[contactNumber] 260x38",
+   "button[visibility] 26x33",
+   "button[delete] 26x33",
+   "input[affirmationCheckbo] 13x16",
+   "button[save\nSave Draft] 149x40",
+   "button[Submit Correction ] 280x40"
+  ],
+  "fs16": [
+   "select#correctionCategory:14px",
+   "input#:12px",
+   "input#contactNumber:14px",
+   "textarea#reasonArea:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "records-correction.html",
+  "w": 1024,
+  "overflow": false,
+  "sw": 1024,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 13,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "select[Name Spelling / Le] 392x38",
+   "input[text] 64x16",
+   "input[contactNumber] 128x38",
+   "button[visibility] 26x33",
+   "button[delete] 26x33",
+   "input[affirmationCheckbo] 13x16"
+  ],
+  "fs16": [
+   "select#correctionCategory:14px",
+   "input#:12px",
+   "input#contactNumber:14px",
+   "textarea#reasonArea:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "records-correction.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 15,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "select[Name Spelling / Le] 563x38",
+   "input[text] 150x16",
+   "input[contactNumber] 213x38",
+   "button[visibility] 26x33",
+   "button[delete] 26x33",
+   "input[affirmationCheckbo] 13x16",
+   "button[save\nSave Draft] 149x40",
+   "button[Submit Correction ] 280x40"
+  ],
+  "fs16": [
+   "select#correctionCategory:14px",
+   "input#:12px",
+   "input#contactNumber:14px",
+   "textarea#reasonArea:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "request-tracker.html",
+  "w": 320,
+  "overflow": false,
+  "sw": 320,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 8,
+  "small": [
+   "button[support_agent\nRequ] 106x40",
+   "input[table-search-input] 240x30",
+   "button[All Requests (4)] 129x24",
+   "button[In Progress (1)] 120x24",
+   "button[Ready for Pick-Up ] 160x24",
+   "button[Completed (2)] 119x24",
+   "button[Previous] 70x24",
+   "button[Next] 45x24"
+  ],
+  "fs16": [
+   "input#table-search-input:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "request-tracker.html",
+  "w": 390,
+  "overflow": false,
+  "sw": 390,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 9,
+  "small": [
+   "button[receipt_long\nView ] 162x40",
+   "button[support_agent\nRequ] 124x40",
+   "input[table-search-input] 310x30",
+   "button[All Requests (4)] 129x24",
+   "button[In Progress (1)] 120x24",
+   "button[Ready for Pick-Up ] 160x24",
+   "button[Completed (2)] 119x24",
+   "button[Previous] 70x24",
+   "button[Next] 45x24"
+  ],
+  "fs16": [
+   "input#table-search-input:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "request-tracker.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 13,
+  "small": [
+   "button[download\nExport Su] 169x36",
+   "button[add_task\nNew Docum] 218x36",
+   "button[receipt_long\nView ] 165x40",
+   "button[support_agent\nRequ] 126x40",
+   "input[table-search-input] 512x30",
+   "button[All Requests (4)] 129x24",
+   "button[In Progress (1)] 120x24",
+   "button[Ready for Pick-Up ] 160x24",
+   "button[Completed (2)] 119x24",
+   "button[View Timeline] 102x24",
+   "button[Claiming Slip] 70x40",
+   "button[Previous] 70x24",
+   "button[Next] 45x24"
+  ],
+  "fs16": [
+   "input#table-search-input:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "request-tracker.html",
+  "w": 1024,
+  "overflow": false,
+  "sw": 1024,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 16,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[receipt_long\nView ] 157x40",
+   "button[support_agent\nRequ] 120x40",
+   "input[table-search-input] 56x30",
+   "button[All Requests (4)] 129x24",
+   "button[In Progress (1)] 120x24",
+   "button[Ready for Pick-Up ] 160x24",
+   "button[Completed (2)] 119x24",
+   "button[Previous] 70x24",
+   "button[Next] 45x24"
+  ],
+  "fs16": [
+   "input#table-search-input:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "request-tracker.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 22,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[receipt_long\nView ] 214x24",
+   "button[support_agent\nRequ] 160x24",
+   "input[table-search-input] 191x30",
+   "button[All Requests (4)] 129x24",
+   "button[In Progress (1)] 120x24",
+   "button[Ready for Pick-Up ] 160x24",
+   "button[Completed (2)] 119x24",
+   "button[View Timeline] 102x24",
+   "button[print] 26x33",
+   "button[Claiming Slip] 75x40",
+   "button[file_download\ne-Co] 67x40",
+   "button[Registrar Note] 106x24",
+   "button[View Dossier] 96x24",
+   "button[Previous] 70x24",
+   "button[Next] 45x24"
+  ],
+  "fs16": [
+   "input#table-search-input:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "admin.html",
+  "w": 320,
+  "overflow": false,
+  "sw": 320,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 3,
+  "small": [
+   "button[download\nExport CS] 174x34",
+   "button[sync\nSync SIS Ledg] 158x34",
+   "button[restart_alt\nReset ] 165x34"
+  ],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "admin.html",
+  "w": 390,
+  "overflow": false,
+  "sw": 390,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 3,
+  "small": [
+   "button[download\nExport CS] 174x34",
+   "button[sync\nSync SIS Ledg] 158x34",
+   "button[restart_alt\nReset ] 165x34"
+  ],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "admin.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 3,
+  "small": [
+   "button[download\nExport CS] 174x34",
+   "button[sync\nSync SIS Ledg] 158x34",
+   "button[restart_alt\nReset ] 165x34"
+  ],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "admin.html",
+  "w": 1024,
+  "overflow": false,
+  "sw": 1024,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 12,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[download\nExport CS] 174x34",
+   "button[sync\nSync SIS Ledg] 158x34",
+   "button[restart_alt\nReset ] 165x34"
+  ],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "admin.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 12,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[download\nExport CS] 174x34",
+   "button[sync\nSync SIS Ledg] 158x34",
+   "button[restart_alt\nReset ] 165x34"
+  ],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "document-queue.html",
+  "w": 320,
+  "overflow": false,
+  "sw": 320,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 22,
+  "small": [
+   "button[sync\nSync Real-Tim] 175x34",
+   "button[verified_user\nBatc] 154x34",
+   "input[queueSearchInput] 256x42",
+   "select[All Document Types] 256x37",
+   "select[All Delivery Modes] 256x37",
+   "button[PROCESSING (0)] 106x40",
+   "button[print\nReleasing Ma] 148x28",
+   "button[download\nExport CS] 103x28",
+   "input[selectAllCheckbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "button[chevron_left] 32x40",
+   "button[chevron_right] 32x40",
+   "button[Manage Stamping\nar] 124x14",
+   "button[Print Waybills\npri] 93x28"
+  ],
+  "fs16": [
+   "input#queueSearchInput:14px",
+   "select#docTypeSelect:12px",
+   "select#fulfillmentSelect:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "document-queue.html",
+  "w": 390,
+  "overflow": false,
+  "sw": 390,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 22,
+  "small": [
+   "button[sync\nSync Real-Tim] 175x34",
+   "button[verified_user\nBatc] 154x34",
+   "input[queueSearchInput] 326x42",
+   "select[All Document Types] 326x37",
+   "select[All Delivery Modes] 326x37",
+   "button[PROCESSING (0)] 106x40",
+   "button[print\nReleasing Ma] 148x28",
+   "button[download\nExport CS] 103x28",
+   "input[selectAllCheckbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "button[chevron_left] 32x40",
+   "button[chevron_right] 32x40",
+   "button[Manage Stamping\nar] 124x14",
+   "button[Print Waybills\npri] 101x14"
+  ],
+  "fs16": [
+   "input#queueSearchInput:14px",
+   "select#docTypeSelect:12px",
+   "select#fulfillmentSelect:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "document-queue.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 28,
+  "small": [
+   "button[sync\nSync Real-Tim] 175x34",
+   "button[verified_user\nBatc] 154x34",
+   "input[queueSearchInput] 688x42",
+   "select[All Document Types] 688x37",
+   "select[All Delivery Modes] 688x37",
+   "button[ALL REQUESTS (9)] 101x40",
+   "button[PROCESSING (0)] 106x40",
+   "button[READY FOR RELEASIN] 148x40",
+   "button[NEEDS REVIEW (1)] 108x40",
+   "button[print\nReleasing Ma] 118x40",
+   "button[download\nExport CS] 84x40",
+   "input[selectAllCheckbox] 16x16",
+   "input[checkbox] 16x16",
+   "button[check\nApprove] 88x28",
+   "button[close\nDecline] 82x28",
+   "button[task_alt\nComplete] 112x28",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "button[chevron_left] 32x40",
+   "button[chevron_right] 32x40",
+   "button[Manage Stamping\nar] 124x14",
+   "button[Print Waybills\npri] 101x14"
+  ],
+  "fs16": [
+   "input#queueSearchInput:14px",
+   "select#docTypeSelect:12px",
+   "select#fulfillmentSelect:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "document-queue.html",
+  "w": 1024,
+  "overflow": false,
+  "sw": 1024,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 36,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[sync\nSync Real-Tim] 175x34",
+   "button[verified_user\nBatc] 154x34",
+   "input[queueSearchInput] 176x42",
+   "select[All Document Types] 215x37",
+   "select[All Delivery Modes] 217x37",
+   "button[PROCESSING (0)] 106x40",
+   "button[READY FOR RELEASIN] 128x40",
+   "button[NEEDS REVIEW (1)] 95x40",
+   "button[print\nReleasing Ma] 106x40",
+   "button[download\nExport CS] 76x40",
+   "input[selectAllCheckbox] 16x16",
+   "input[checkbox] 16x16",
+   "button[check\nApprove] 88x28",
+   "button[close\nDecline] 82x28",
+   "button[task_alt\nComplete] 112x28",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "button[chevron_left] 32x40",
+   "button[chevron_right] 32x40",
+   "button[Manage Stamping\nar] 102x28",
+   "button[Print Waybills\npri] 68x28"
+  ],
+  "fs16": [
+   "input#queueSearchInput:14px",
+   "select#docTypeSelect:12px",
+   "select#fulfillmentSelect:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "document-queue.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 37,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[sync\nSync Real-Tim] 175x34",
+   "button[verified_user\nBatc] 154x34",
+   "input[queueSearchInput] 432x42",
+   "select[All Document Types] 215x37",
+   "select[All Delivery Modes] 217x37",
+   "button[ALL REQUESTS (9)] 127x26",
+   "button[PROCESSING (0)] 125x26",
+   "button[READY FOR RELEASIN] 188x26",
+   "button[NEEDS REVIEW (1)] 136x26",
+   "button[print\nReleasing Ma] 148x28",
+   "button[download\nExport CS] 103x28",
+   "input[selectAllCheckbox] 16x16",
+   "input[checkbox] 16x16",
+   "button[check\nApprove] 88x28",
+   "button[close\nDecline] 82x28",
+   "button[task_alt\nComplete] 112x28",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "button[chevron_left] 32x40",
+   "button[chevron_right] 32x40",
+   "button[Manage Stamping\nar] 124x14",
+   "button[Print Waybills\npri] 95x28"
+  ],
+  "fs16": [
+   "input#queueSearchInput:14px",
+   "select#docTypeSelect:12px",
+   "select#fulfillmentSelect:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "add-drop.html",
+  "w": 320,
+  "overflow": false,
+  "sw": 320,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 13,
+  "small": [
+   "input[ledger-search-inpu] 256x42",
+   "select[All Colleges\nColle] 321x37",
+   "button[Add/Drop & Enrollm] 193x28",
+   "button[Pending Dean Endor] 220x28",
+   "button[attachment\nView Le] 63x36",
+   "button[close\nDecline] 100x34",
+   "button[check\nApprove & Co] 211x34",
+   "button[task_alt\nComplete] 114x34",
+   "button[Save Memo] 52x36",
+   "button[download] 32x32",
+   "button[chevron_left] 32x32",
+   "button[1] 32x32",
+   "button[chevron_right] 32x32"
+  ],
+  "fs16": [
+   "input#ledger-search-input:14px",
+   "select#:12px",
+   "select#:12px",
+   "textarea#:14px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "add-drop.html",
+  "w": 390,
+  "overflow": false,
+  "sw": 390,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 16,
+  "small": [
+   "button[history\nReset demo] 157x34",
+   "button[publish\nBatch SIS ] 147x34",
+   "input[ledger-search-inpu] 326x42",
+   "select[All Colleges\nColle] 321x37",
+   "select[Add/Drop & Enrollm] 219x37",
+   "button[Add/Drop & Enrollm] 193x28",
+   "button[Pending Dean Endor] 220x28",
+   "button[attachment\nView Le] 63x36",
+   "button[close\nDecline] 100x34",
+   "button[check\nApprove & Co] 211x34",
+   "button[task_alt\nComplete] 114x34",
+   "button[Save Memo] 52x36",
+   "button[download] 32x32",
+   "button[chevron_left] 32x32",
+   "button[1] 32x32",
+   "button[chevron_right] 32x32"
+  ],
+  "fs16": [
+   "input#ledger-search-input:14px",
+   "select#:12px",
+   "select#:12px",
+   "textarea#:14px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "add-drop.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 18,
+  "small": [
+   "button[history\nReset demo] 157x34",
+   "button[publish\nBatch SIS ] 147x34",
+   "input[ledger-search-inpu] 148x42",
+   "select[All Colleges\nColle] 321x37",
+   "select[Add/Drop & Enrollm] 219x37",
+   "button[Add/Drop & Enrollm] 193x28",
+   "button[Pending Dean Endor] 220x28",
+   "button[Registrar Authoriz] 181x28",
+   "button[Declined / Rejecte] 171x28",
+   "button[attachment\nView Le] 74x36",
+   "button[close\nDecline] 100x34",
+   "button[check\nApprove & Co] 211x34",
+   "button[task_alt\nComplete] 114x34",
+   "button[Save Memo] 84x22",
+   "button[download] 32x32",
+   "button[chevron_left] 32x32",
+   "button[1] 32x32",
+   "button[chevron_right] 32x32"
+  ],
+  "fs16": [
+   "input#ledger-search-input:14px",
+   "select#:12px",
+   "select#:12px",
+   "textarea#:14px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "add-drop.html",
+  "w": 1024,
+  "overflow": false,
+  "sw": 1024,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 27,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[history\nReset demo] 157x34",
+   "button[publish\nBatch SIS ] 147x34",
+   "input[ledger-search-inpu] 116x42",
+   "select[All Colleges\nColle] 321x37",
+   "select[Add/Drop & Enrollm] 219x37",
+   "button[Add/Drop & Enrollm] 193x28",
+   "button[Pending Dean Endor] 220x28",
+   "button[Registrar Authoriz] 181x28",
+   "button[Declined / Rejecte] 171x28",
+   "button[attachment\nView Le] 70x36",
+   "button[close\nDecline] 100x34",
+   "button[check\nApprove & Co] 211x34",
+   "button[task_alt\nComplete] 114x34",
+   "button[Save Memo] 84x22",
+   "button[download] 32x32",
+   "button[chevron_left] 32x32",
+   "button[1] 32x32",
+   "button[chevron_right] 32x32"
+  ],
+  "fs16": [
+   "input#ledger-search-input:14px",
+   "select#:12px",
+   "select#:12px",
+   "textarea#:14px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "add-drop.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 28,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[history\nReset demo] 157x34",
+   "button[publish\nBatch SIS ] 147x34",
+   "input[ledger-search-inpu] 372x42",
+   "select[All Colleges\nColle] 321x37",
+   "select[Add/Drop & Enrollm] 219x37",
+   "button[Add/Drop & Enrollm] 193x28",
+   "button[Pending Dean Endor] 220x28",
+   "button[Registrar Authoriz] 181x28",
+   "button[Declined / Rejecte] 171x28",
+   "button[Shifting & Transfe] 217x28",
+   "button[attachment\nView Le] 63x36",
+   "button[close\nDecline] 100x34",
+   "button[check\nApprove & Co] 211x34",
+   "button[task_alt\nComplete] 114x34",
+   "button[Save Memo] 84x22",
+   "button[download] 32x32",
+   "button[chevron_left] 32x32",
+   "button[1] 32x32",
+   "button[chevron_right] 32x32"
+  ],
+  "fs16": [
+   "input#ledger-search-input:14px",
+   "select#:12px",
+   "select#:12px",
+   "textarea#:14px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "shifting-transfer.html",
+  "w": 320,
+  "overflow": false,
+  "sw": 320,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 12,
+  "small": [
+   "button[download_for_offli] 117x34",
+   "button[refresh\nSync Recor] 121x34",
+   "input[table-search] 240x42",
+   "select[All Evaluators\nCAS] 183x36",
+   "button[filter_list\nFilter] 86x38",
+   "button[Add/Drop & Enrollm] 154x26",
+   "button[Shifting & Transfe] 216x28",
+   "button[chevron_left] 32x32",
+   "button[chevron_right] 32x32",
+   "button[verified_user\nSign] 240x38",
+   "button[report_problem\nIss] 240x34",
+   "button[Cancel] 74x32"
+  ],
+  "fs16": [
+   "input#table-search:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "shifting-transfer.html",
+  "w": 390,
+  "overflow": false,
+  "sw": 390,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 13,
+  "small": [
+   "button[download_for_offli] 117x34",
+   "button[refresh\nSync Recor] 121x34",
+   "input[table-search] 310x42",
+   "select[All Evaluators\nCAS] 183x36",
+   "button[filter_list\nFilter] 86x38",
+   "button[Add/Drop & Enrollm] 154x26",
+   "button[Shifting & Transfe] 216x28",
+   "button[chevron_left] 32x32",
+   "button[chevron_right] 32x32",
+   "button[verified_user\nSign] 310x38",
+   "button[report_problem\nIss] 310x34",
+   "button[Cancel] 74x32",
+   "button[Authorize & Update] 226x32"
+  ],
+  "fs16": [
+   "input#table-search:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "shifting-transfer.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 13,
+  "small": [
+   "input[table-search] 688x42",
+   "select[All Evaluators\nCAS] 183x36",
+   "button[filter_list\nFilter] 86x38",
+   "button[Add/Drop & Enrollm] 154x26",
+   "button[Shifting & Transfe] 216x28",
+   "button[Credit Validation ] 205x26",
+   "button[LOA & Readmission] 131x26",
+   "button[chevron_left] 32x32",
+   "button[chevron_right] 32x32",
+   "button[verified_user\nSign] 688x38",
+   "button[report_problem\nIss] 688x34",
+   "button[Cancel] 74x32",
+   "button[Authorize & Update] 226x32"
+  ],
+  "fs16": [
+   "input#table-search:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "shifting-transfer.html",
+  "w": 1024,
+  "overflow": false,
+  "sw": 1024,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 21,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "input[table-search] 375x42",
+   "select[All Evaluators\nCAS] 183x36",
+   "button[filter_list\nFilter] 86x38",
+   "button[Add/Drop & Enrollm] 154x26",
+   "button[Shifting & Transfe] 216x28",
+   "button[Credit Validation ] 205x26",
+   "button[LOA & Readmission] 131x26",
+   "button[chevron_left] 32x32",
+   "button[chevron_right] 32x32",
+   "button[report_problem\nIss] 181x34",
+   "button[Cancel] 74x32",
+   "button[Authorize & Update] 226x32"
+  ],
+  "fs16": [
+   "input#table-search:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "shifting-transfer.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 26,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "input[table-search] 631x42",
+   "select[All Evaluators\nCAS] 183x36",
+   "button[filter_list\nFilter] 86x38",
+   "button[Add/Drop & Enrollm] 154x26",
+   "button[Shifting & Transfe] 216x28",
+   "button[Credit Validation ] 205x26",
+   "button[LOA & Readmission] 131x26",
+   "button[Graduation & Verif] 167x26",
+   "button[check\nApprove] 92x28",
+   "button[close\nDecline] 86x28",
+   "button[Complete] 84x28",
+   "button[chevron_left] 32x32",
+   "button[chevron_right] 32x32",
+   "button[verified_user\nSign] 267x38",
+   "button[report_problem\nIss] 267x34",
+   "button[Cancel] 74x32",
+   "button[Authorize & Update] 226x32"
+  ],
+  "fs16": [
+   "input#table-search:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "graduation-verification.html",
+  "w": 320,
+  "overflow": false,
+  "sw": 320,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 6,
+  "small": [
+   "input[text] 256x42",
+   "select[All Colleges (Engi] 377x37",
+   "button[Add/Drop & Enrollm] 175x28",
+   "button[Shifting & Transfe] 217x28",
+   "button[verified\nIssue Con] 208x34",
+   "button[print\nPrint Offici] 208x34"
+  ],
+  "fs16": [
+   "input#:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "graduation-verification.html",
+  "w": 390,
+  "overflow": false,
+  "sw": 390,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 7,
+  "small": [
+   "input[text] 326x42",
+   "select[All Colleges (Engi] 377x37",
+   "button[Add/Drop & Enrollm] 175x28",
+   "button[Shifting & Transfe] 217x28",
+   "button[verified\nIssue Con] 278x34",
+   "button[print\nPrint Offici] 278x34",
+   "button[View All Cohorts\na] 76x32"
+  ],
+  "fs16": [
+   "input#:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "graduation-verification.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 14,
+  "small": [
+   "input[text] 688x42",
+   "select[All Colleges (Engi] 377x37",
+   "button[download] 40x47",
+   "button[Add/Drop & Enrollm] 175x28",
+   "button[Shifting & Transfe] 217x28",
+   "button[Credit Validation ] 228x28",
+   "button[LOA & Readmission] 153x28",
+   "button[check\nApprove] 96x28",
+   "button[verified\nIssue Con] 640x34",
+   "button[print\nPrint Offici] 640x34",
+   "button[View All Cohorts\na] 123x16",
+   "button[Review] 68x24",
+   "button[Review] 68x24",
+   "button[Resolve] 72x24"
+  ],
+  "fs16": [
+   "input#:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "graduation-verification.html",
+  "w": 1024,
+  "overflow": false,
+  "sw": 1024,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 23,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "input[text] 223x42",
+   "select[All Colleges (Engi] 377x37",
+   "button[download] 40x47",
+   "button[Add/Drop & Enrollm] 175x28",
+   "button[Shifting & Transfe] 217x28",
+   "button[Credit Validation ] 228x28",
+   "button[LOA & Readmission] 153x28",
+   "button[check\nApprove] 96x28",
+   "button[verified\nIssue Con] 288x34",
+   "button[print\nPrint Offici] 288x34",
+   "button[View All Cohorts\na] 123x16",
+   "button[Review] 68x24",
+   "button[Review] 68x24",
+   "button[Resolve] 72x24"
+  ],
+  "fs16": [
+   "input#:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "graduation-verification.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 26,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "input[text] 479x42",
+   "select[All Colleges (Engi] 377x37",
+   "button[download] 40x47",
+   "button[Add/Drop & Enrollm] 175x28",
+   "button[Shifting & Transfe] 217x28",
+   "button[Credit Validation ] 228x28",
+   "button[LOA & Readmission] 153x28",
+   "button[school\nGraduation ] 211x28",
+   "button[check\nApprove] 96x28",
+   "button[close\nDecline] 90x28",
+   "button[Complete] 92x28",
+   "button[verified\nIssue Con] 288x34",
+   "button[print\nPrint Offici] 288x34",
+   "button[View All Cohorts\na] 123x16",
+   "button[Review] 68x24",
+   "button[Review] 68x24",
+   "button[Resolve] 72x24"
+  ],
+  "fs16": [
+   "input#:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "loa-readmission.html",
+  "w": 320,
+  "overflow": false,
+  "sw": 320,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 15,
+  "small": [
+   "a[Add/Drop & Enrollm] 159x28",
+   "a[Shifting & Transfe] 201x28",
+   "a[Credit Validation ] 212x28",
+   "a[LOA & Readmission] 153x28",
+   "a[Graduation & Verif] 173x28",
+   "input[ledgerSearchInput] 256x42",
+   "select[LOA & Readmission\n] 181x37",
+   "select[All Colleges & Uni] 268x37",
+   "button[Archive (0)] 68x36",
+   "button[badge\nIssue Certif] 256x38",
+   "button[verified_user\nExpo] 256x38",
+   "button[task_alt\nFinalize ] 256x40",
+   "a[Academic Residency] 84x42",
+   "a[Data Privacy Compl] 80x28",
+   "a[Audit Protocol] 51x28"
+  ],
+  "fs16": [
+   "input#ledgerSearchInput:14px",
+   "select#:12px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "loa-readmission.html",
+  "w": 390,
+  "overflow": false,
+  "sw": 390,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 16,
+  "small": [
+   "a[Add/Drop & Enrollm] 159x28",
+   "a[Shifting & Transfe] 201x28",
+   "a[Credit Validation ] 212x28",
+   "a[LOA & Readmission] 153x28",
+   "a[Graduation & Verif] 173x28",
+   "input[ledgerSearchInput] 326x42",
+   "select[LOA & Readmission\n] 181x37",
+   "select[All Colleges & Uni] 268x37",
+   "button[Archive (0)] 68x36",
+   "button[description\nPrint ] 326x38",
+   "button[badge\nIssue Certif] 326x38",
+   "button[verified_user\nExpo] 326x38",
+   "button[task_alt\nFinalize ] 326x40",
+   "a[Academic Residency] 114x28",
+   "a[Data Privacy Compl] 108x28",
+   "a[Audit Protocol] 63x28"
+  ],
+  "fs16": [
+   "input#ledgerSearchInput:14px",
+   "select#:12px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "loa-readmission.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 23,
+  "small": [
+   "button[history\nReset demo] 157x34",
+   "button[add_circle\nInitiat] 227x34",
+   "a[Add/Drop & Enrollm] 159x28",
+   "a[Shifting & Transfe] 201x28",
+   "a[Credit Validation ] 212x28",
+   "a[LOA & Readmission] 153x28",
+   "a[Graduation & Verif] 173x28",
+   "input[ledgerSearchInput] 223x42",
+   "select[LOA & Readmission\n] 181x37",
+   "select[All Colleges & Uni] 268x37",
+   "button[All Requests (1)] 115x22",
+   "button[Returnee Applicati] 170x22",
+   "button[Active Leaves (0)] 123x22",
+   "button[Archive (0)] 87x22",
+   "button[check\nApprove] 96x28",
+   "button[close\nDecline] 90x28",
+   "button[description\nPrint ] 688x38",
+   "button[badge\nIssue Certif] 688x38",
+   "button[verified_user\nExpo] 688x38",
+   "button[task_alt\nFinalize ] 688x40",
+   "a[Academic Residency] 94x42",
+   "a[Data Privacy Compl] 89x28",
+   "a[Audit Protocol] 52x28"
+  ],
+  "fs16": [
+   "input#ledgerSearchInput:14px",
+   "select#:12px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "loa-readmission.html",
+  "w": 1024,
+  "overflow": false,
+  "sw": 1024,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 25,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "a[Add/Drop & Enrollm] 159x28",
+   "a[Shifting & Transfe] 201x28",
+   "a[Credit Validation ] 212x28",
+   "a[LOA & Readmission] 153x28",
+   "a[Graduation & Verif] 173x28",
+   "input[ledgerSearchInput] 191x42",
+   "select[LOA & Readmission\n] 181x37",
+   "select[All Colleges & Uni] 268x37",
+   "button[All Requests (1)] 115x22",
+   "button[Returnee Applicati] 170x22",
+   "button[Active Leaves (0)] 123x22",
+   "button[Archive (0)] 87x22",
+   "button[check\nApprove] 96x28",
+   "a[Academic Residency] 87x42",
+   "a[Data Privacy Compl] 83x28",
+   "a[Audit Protocol] 51x28"
+  ],
+  "fs16": [
+   "input#ledgerSearchInput:14px",
+   "select#:12px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "loa-readmission.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 31,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "a[Add/Drop & Enrollm] 159x28",
+   "a[Shifting & Transfe] 201x28",
+   "a[Credit Validation ] 212x28",
+   "a[LOA & Readmission] 153x28",
+   "a[Graduation & Verif] 173x28",
+   "input[ledgerSearchInput] 447x42",
+   "select[LOA & Readmission\n] 181x37",
+   "select[All Colleges & Uni] 268x37",
+   "button[All Requests (1)] 115x22",
+   "button[Returnee Applicati] 170x22",
+   "button[Active Leaves (0)] 123x22",
+   "button[Archive (0)] 87x22",
+   "button[check\nApprove] 96x28",
+   "button[close\nDecline] 90x28",
+   "button[Complete] 92x28",
+   "button[description\nPrint ] 267x38",
+   "button[badge\nIssue Certif] 267x38",
+   "button[verified_user\nExpo] 267x38",
+   "button[task_alt\nFinalize ] 267x40",
+   "a[Academic Residency] 132x28",
+   "a[Data Privacy Compl] 126x28",
+   "a[Audit Protocol] 74x28"
+  ],
+  "fs16": [
+   "input#ledgerSearchInput:14px",
+   "select#:12px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ }
+]

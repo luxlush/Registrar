@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" style="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_dashboard" name="shell-type">
+  <!-- Client-side Route Protection -->
+  <script>
+    (function () {
+      const role = window.localStorage.getItem('currentUserRole');
+      if (role !== 'student') {
+        window.location.replace('unauthorized.html');
+      }
+    })();
+  </script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { "darkMode": "class", "theme": { "extend": { "colors": { "on-primary-fixed-variant": "#891c1b", "secondary-fixed-dim": "#ffb77d", "tertiary": "#1f273b", "surface-container-high": "#e6e8ea", "on-secondary": "#ffffff", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#6e3900", "surface-dim": "#d8dadc", "on-tertiary-fixed": "#131b2e", "on-error-container": "#93000a", "outline-variant": "#dfbfbc", "inverse-primary": "#ffb3ac", "tertiary-fixed": "#dae2fd", "on-tertiary-fixed-variant": "#3f465c", "on-background": "#191c1e", "surface-container-highest": "#e0e3e5", "inverse-surface": "#2d3133", "tertiary-container": "#353d52", "surface-container": "#eceef0", "surface": "#f7f9fb", "error": "#ba1a1a", "surface-bright": "#f7f9fb", "error-container": "#ffdad6", "on-primary-fixed": "#410003", "on-tertiary": "#ffffff", "surface-container-low": "#f2f4f6", "on-error": "#ffffff", "on-primary-container": "#ff837a", "tertiary-fixed-dim": "#bec6e0", "background": "#f7f9fb", "on-surface": "#191c1e", "primary-container": "#7b1113", "surface-container-lowest": "#ffffff", "secondary-fixed": "#ffdcc3", "primary": "#570005", "on-tertiary-container": "#a0a8c1", "surface-variant": "#e0e3e5", "surface-tint": "#aa3530", "primary-fixed": "#ffdad6", "on-secondary-container": "#663500", "outline": "#8b716e", "on-secondary-fixed": "#2f1500", "on-surface-variant": "#58413f", "secondary-container": "#fe932c", "secondary": "#904d00", "inverse-on-surface": "#eff1f3", "primary-fixed-dim": "#ffb3ac" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter-lg": "2rem", "space-sm": "0.5rem", "gutter": "1.5rem", "margin-mobile": "1rem", "margin": "2rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "space-md": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-lg": ["Lora", "serif"], "headline-lg-mobile": ["Lora", "serif"], "body-lg": ["Libre Franklin", "sans-serif"], "headline-sm": ["Lora", "serif"], "body-md": ["Libre Franklin", "sans-serif"], "label-sm": ["Libre Franklin", "sans-serif"], "code-sm": ["JetBrains Mono"], "headline-xl": ["Lora", "serif"], "label-lg": ["Libre Franklin", "sans-serif"], "body-sm": ["Libre Franklin", "sans-serif"], "headline-xl-mobile": ["Lora", "serif"], "label-md": ["Libre Franklin", "sans-serif"], "headline-md": ["Lora", "serif"] }, "fontSize": { "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } };</script>
+</head>
+
+<body class="bg-background font-body-md text-on-surface antialiased">
+  <aside
+    class="fixed left-0 top-0 h-full w-72 text-on-primary z-50 flex flex-col justify-between shadow-2xl bg-primary">
+    <div class="flex flex-col">
+      <div class="h-16 flex items-center gap-space-sm px-space-lg"><img alt="USeP Seal Crest Logo"
+          class="h-8 w-auto object-contain brightness-0 invert" src="../src/assets/usep-logo-transparent.png">
+        <div class="flex flex-col min-w-0"><span
+            class="font-headline-sm text-headline-sm text-on-primary leading-tight truncate font-bold">USeP
+            e-Registrar</span><span
+            class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Student Portal</span>
+        </div>
+      </div>
+      <div class="px-space-md py-space-sm">
+        <nav class="flex flex-col gap-space-xs mt-space-xs"><a aria-current="page"
+            class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-surface-container-lowest text-primary font-headline-sm rounded-lg shadow-sm font-semibold"
+            data-path="dashboard-home" href="student.html"><span
+              class="material-symbols-outlined text-[20px] text-primary">home</span><span
+              class="font-body-md text-body-md font-bold">Dashboard</span></a><a
+            class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-black/20 hover:text-on-primary transition-colors"
+            data-path="document-requests" href="document-requests.html"><span
+              class="material-symbols-outlined text-[20px]">description</span><span
+              class="font-body-md text-body-md">Document Requests</span></a><a
+            class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-black/20 hover:text-on-primary transition-colors"
+            data-path="records-correction" href="records-correction.html"><span
+              class="material-symbols-outlined text-[20px]">how_to_reg</span><span
+              class="font-body-md text-body-md">Records Correction</span></a><a
+            class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-black/20 hover:text-on-primary transition-colors"
+            data-path="request-tracker" href="request-tracker.html"><span
+              class="material-symbols-outlined text-[20px]">timelapse</span><span
+              class="font-body-md text-body-md">Request Tracker &amp; History</span></a></nav>
+      </div>
+    </div>
+    <div class="p-space-md m-space-md rounded-xl bg-primary-container">
+      <div class="flex items-center gap-space-sm">
+        <div
+          class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-headline-sm text-headline-sm shadow-sm font-bold">
+          JP</div>
+        <div class="flex flex-col min-w-0 flex-1"><span
+            class="font-headline-sm text-headline-sm text-on-primary truncate leading-tight font-semibold">Joshua
+            Pearce</span><span
+            class="font-code-sm text-code-sm text-secondary-fixed leading-tight">2021-04182</span><span
+            class="font-label-sm text-label-sm text-primary-fixed-dim truncate">BS Computer Science</span></div>
+      </div>
+      <div class="flex items-center justify-between mt-space-md pt-space-xs">
+        <div class="relative"><button
+            class="p-space-xs text-primary-fixed-dim hover:bg-black/30 hover:text-on-primary rounded-lg transition-colors flex items-center justify-center"
+            type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span
+            class="absolute top-0.5 right-0.5 w-2 h-2 rounded-full bg-secondary-container"></span></div><button
+          class="p-space-xs text-primary-fixed-dim hover:bg-black/30 hover:text-on-primary rounded-lg transition-colors flex items-center justify-center"
+          type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button>
+      </div>
+    </div>
+  </aside>
+  <div class="pl-72 flex flex-col min-h-screen">
+    <header
+      class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg">
+      <div class="flex items-center gap-space-sm"><img alt="USeP Seal Crest Logo" class="h-8 w-auto object-contain"
+          src="../src/assets/usep-logo-transparent.png"><span
+          class="font-headline-sm text-headline-sm text-primary font-bold">USeP Portal</span><span
+          class="text-outline-variant">/</span>
+        <div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-full"><span
+            class="material-symbols-outlined text-on-surface-variant text-[16px]">location_city</span><span
+            class="font-label-md text-label-md text-on-surface-variant">Obrero Campus - Main</span></div>
+      </div>
+      <div class="flex items-center gap-space-md">
+        <div
+          class="flex items-center gap-space-xs bg-secondary-fixed text-on-secondary-fixed px-space-md py-space-xs rounded-full shadow-sm">
+          <span class="material-symbols-outlined text-[16px]">school</span><span
+            class="font-label-md text-label-md">S.Y. 2026-2027 (1st Semester)</span>
+        </div><button onclick="window.localStorage.removeItem('currentUserRole'); window.location.href='login.html';"
+          class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"
+          type="button"><span class="material-symbols-outlined text-[18px]">logout</span><span
+            class="font-label-md text-label-md font-semibold">Sign Out</span></button>
+      </div>
+    </header>
+    <main class="w-full pt-16 bg-background flex-1">
+      <div class="flex flex-col w-full">
+        <!-- Interactive Feedback Toast (Hidden by default) -->
+        <div
+          class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-sm bg-tertiary text-on-tertiary px-space-lg py-space-md rounded-xl shadow-2xl"
+          id="toast-notification">
+          <span class="material-symbols-outlined text-secondary-fixed text-[22px]">check_circle</span>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm leading-none" id="toast-title">Request Initiated</span>
+            <span class="font-body-sm text-body-sm text-tertiary-fixed-dim" id="toast-desc">Draft item added to your
+              document cart.</span>
+          </div>
+        </div>
+        <div class="p-space-lg lg:p-space-xl flex flex-col gap-space-xl max-w-7xl mx-auto w-full">
+          <!-- Hero / Welcome Command Center -->
+          <div
+            class="relative overflow-hidden bg-gradient-to-r from-primary-container via-primary to-primary-container text-on-primary rounded-xl p-space-lg lg:p-space-xl shadow-lg">
+            <div
+              class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none">
+            </div>
+            <div class="absolute right-10 bottom-0 opacity-10 pointer-events-none select-none">
+              <span class="material-symbols-outlined text-[240px] leading-none">account_balance</span>
+            </div>
+            <div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-lg">
+              <div class="flex flex-col gap-space-xs max-w-2xl">
+                <div class="flex items-center gap-space-xs">
+                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Student
+                    e-Registrar Portal</span>
+                  <span class="text-outline-variant">•</span>
+                  <span class="font-code-sm text-code-sm bg-black/30 px-space-xs py-0.5 rounded text-primary-fixed">ID:
+                    2021-04182</span>
+                </div>
+                <h1 class="font-headline-xl text-headline-xl text-on-primary font-extrabold tracking-tight">Welcome
+                  back, Joshua Pearce</h1>
+                <p class="font-body-md text-body-md text-primary-fixed-dim">
+                  College of Information and Computing (CIC) • <span class="text-on-primary font-medium">BS Computer
+                    Science</span>
+                </p>
+              </div>
+              <!-- Document Quick Search Bar -->
+              <div class="w-full lg:w-96 flex flex-col gap-space-xs">
+                <label class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed"
+                  for="catalog-search">Quick Service Finder</label>
+                <div class="relative flex items-center">
+                  <span
+                    class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px] pointer-events-none">search</span>
+                  <input
+                    class="w-full pl-10 pr-10 py-2.5 bg-surface-container-lowest text-on-surface rounded-lg font-body-md text-body-md placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary-container shadow-md"
+                    id="catalog-search"
+                    onkeypress="if(event.key === 'Enter') window.location.href='document-requests.html?search='+encodeURIComponent(this.value)"
+                    placeholder="Search TOR, diplomas, records..." type="text">
+                  <button class="absolute right-3 text-on-surface-variant hover:text-on-surface transition-colors"
+                    onclick="document.getElementById('catalog-search').value='';" title="Clear search" type="button">
+                    <span class="material-symbols-outlined text-[18px]">close</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Metrics Row (4 Asymmetric Cards) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+            <!-- 1. Enrollment Status -->
+            <div
+              class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Current Status</span>
+                <span
+                  class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-emerald-50 text-emerald-800 font-label-sm text-label-sm">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  Active
+                </span>
+              </div>
+              <div class="my-space-sm">
+                <span class="font-headline-md text-headline-md text-on-surface block leading-tight">Regular / Officially
+                  Enrolled</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">S.Y. 2026–2027 • 1st
+                  Semester</span>
+              </div>
+              <div
+                class="flex items-center gap-space-xs text-outline font-label-md text-label-md pt-space-xs bg-surface-container-low px-space-sm py-1 rounded">
+                <span class="material-symbols-outlined text-[16px]">verified</span>
+                Verified via CIC Dean's Office
+              </div>
+            </div>
+            <!-- 2. Active Requests -->
+            <div
+              class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Active Requests</span>
+                <div
+                  class="w-8 h-8 rounded-lg bg-secondary-fixed/50 text-on-secondary-fixed flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[18px]">pending_actions</span>
+                </div>
+              </div>
+              <div class="my-space-sm">
+                <div class="flex items-baseline gap-space-xs">
+                  <span class="font-headline-xl text-headline-xl text-primary font-black">02</span>
+                  <span class="font-headline-sm text-headline-sm text-on-surface">Pending Review</span>
+                </div>
+                <span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Estimated turnaround: 2-3
+                  school days</span>
+              </div>
+              <div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md pt-space-xs">
+                <span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+                TOR &amp; Records Correction
+              </div>
+            </div>
+            <!-- 3. Claimable Documents -->
+            <div
+              class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Documents
+                  Claimable</span>
+                <span
+                  class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-secondary-container/20 text-on-secondary-container font-label-sm text-label-sm">
+                  Ready
+                </span>
+              </div>
+              <div class="my-space-sm">
+                <div class="flex items-baseline gap-space-xs">
+                  <span class="font-headline-xl text-headline-xl text-secondary font-black">01</span>
+                  <span class="font-headline-sm text-headline-sm text-on-surface">Ready for Pick-up</span>
+                </div>
+                <span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Window 3 (Administration
+                  Bldg.)</span>
+              </div>
+              <div class="flex items-center justify-between bg-surface-container-low px-space-sm py-1 rounded">
+                <span class="font-label-sm text-label-sm text-primary font-bold">COE #USEP-2026-8401</span>
+                <button class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-0.5"
+                  onclick="triggerToast('Digital PDF Downloaded', 'COE saved to your device.')" type="button">
+                  <span class="material-symbols-outlined text-[14px]">download</span> Get PDF
+                </button>
+              </div>
+            </div>
+            <!-- 4. Curricular Standing -->
+            <div
+              class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Curricular
+                  Standing</span>
+                <span class="font-label-md text-label-md text-primary font-bold">89.2%</span>
+              </div>
+              <div class="my-space-sm">
+                <span class="font-headline-md text-headline-md text-on-surface block leading-tight">Senior
+                  Standing</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">132 of 148 Academic
+                  Units</span>
+              </div>
+              <!-- Progress Bar -->
+              <div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+                <div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 89.2%;"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Split Bottom Section: Activity Table (2/3) + Guidelines & Advisories (1/3) -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg items-start">
+            <!-- Recent Requests & Timeline (2/3 width) -->
+            <div
+              class="lg:col-span-2 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+              <div class="flex items-center justify-between">
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Audit
+                    Trail</span>
+                  <h3 class="font-headline-md text-headline-md text-on-surface font-bold">Recent Requests &amp; Timeline
+                  </h3>
+                </div>
+                <button class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1"
+                  type="button" onclick="openHistoryModal()">
+                  View All History
+                </button>
+              </div>
+              <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                  <thead>
+                    <tr
+                      class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+                      <th class="py-3 px-4 rounded-l-lg">Transaction &amp; Details</th>
+                      <th class="py-3 px-4">Date Filed</th>
+                      <th class="py-3 px-4">Status</th>
+                      <th class="py-3 px-4 rounded-r-lg text-right">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="dashboard-requests-tbody" class="divide-y-0 space-y-2"></tbody>
+                </table>
+              </div>
+            </div>
+            <!-- Registrar Announcements & Guidelines (1/3 width) -->
+            <div class="flex flex-col gap-space-md">
+              <!-- Official Advisory Card -->
+              <div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+                <div class="flex items-center gap-2 text-primary font-headline-sm text-headline-sm font-bold">
+                  <span class="material-symbols-outlined text-[22px]">campaign</span>
+                  Registrar Advisory
+                </div>
+                <div class="bg-primary-fixed/40 p-space-md rounded-lg flex flex-col gap-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-sm text-label-sm uppercase font-bold text-on-primary-fixed-variant">Board
+                      Examination TOR</span>
+                    <span class="font-label-sm text-label-sm text-outline font-bold">Deadline: Nov 15</span>
+                  </div>
+                  <p class="font-body-sm text-body-sm text-on-surface">
+                    Graduating students and alumni taking the upcoming PRC Board Examinations must lodge applications at
+                    least 15 working days prior to PRC cut-off.
+                  </p>
+                </div>
+                <div class="flex flex-col gap-2 pt-space-xs">
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">schedule</span>
+                    <div class="flex flex-col">
+                      <span class="font-label-md text-label-md text-on-surface font-semibold">Office Releasing
+                        Hours</span>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">Monday–Friday: 8:00 AM – 5:00 PM
+                        (No Noon Break)</span>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">pin_drop</span>
+                    <div class="flex flex-col">
+                      <span class="font-label-md text-label-md text-on-surface font-semibold">Claiming Location</span>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">Ground Floor, Administration
+                        Bldg., Obrero Campus</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <script>
+          // Interactive Toast Trigger
+          function triggerToast(title, desc) {
+            const toast = document.getElementById('toast-notification');
+            document.getElementById('toast-title').textContent = title;
+            document.getElementById('toast-desc').textContent = desc;
+
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+              toast.classList.add('translate-y-20', 'opacity-0');
+              toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 4000);
+          }
+        </script>
+      </div>
+    </main>
+  </div>
+
+
+  <script src="portal-interactions.js"></script>
+
+  <!-- History Modal -->
+  <div id="history-modal"
+    class="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm hidden items-center justify-center p-4 transition-opacity">
+    <div
+      class="bg-surface-container-lowest max-w-4xl w-full rounded-2xl p-space-lg shadow-2xl flex flex-col gap-space-md max-h-[85vh]">
+      <div class="flex items-center justify-between border-b border-surface-container pb-3">
+        <div>
+          <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Full Audit Trail</h2>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Complete history of all your document requests
+          </p>
+        </div>
+        <button type="button" onclick="closeHistoryModal()"
+          class="w-10 h-10 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="overflow-y-auto flex-1 pr-2">
+        <table class="w-full text-left">
+          <thead>
+            <tr
+              class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider sticky top-0">
+              <th class="py-3 px-4 rounded-l-lg">Transaction & Details</th>
+              <th class="py-3 px-4">Date Filed</th>
+              <th class="py-3 px-4">Status</th>
+            </tr>
+          </thead>
+          <tbody id="history-modal-tbody" class="divide-y-0 space-y-2">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let userRequests = [];
+
+    async function loadDashboardRequests() {
+      try {
+        const userStr = window.localStorage.getItem('currentUser');
+        if (!userStr) return;
+        const user = JSON.parse(userStr);
+
+        const response = await fetch('api/student_requests.php?student_id=' + user.id);
+        const data = await response.json();
+        if (!data.success) return;
+
+        userRequests = data.requests;
+        renderDashboardTable();
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    function getStatusStyle(status) {
+      if (status === 'Pending Review' || status === 'Processing') {
+        return `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-900 font-label-sm text-label-sm font-semibold">
+                <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>${status}</span>`;
+      } else if (status === 'Ready for Pickup' || status === 'Completed') {
+        return `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 font-label-sm text-label-sm font-semibold">
+                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>${status}</span>`;
+      }
+      return `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">${status}</span>`;
+    }
+
+    function renderDashboardTable() {
+      const tbody = document.getElementById('dashboard-requests-tbody');
+      tbody.innerHTML = '';
+
+      // Top 3
+      const topRequests = userRequests.slice(0, 3);
+
+      if (topRequests.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="4" class="text-center py-6 text-on-surface-variant font-body-sm">No recent requests found.</td></tr>`;
+        return;
+      }
+
+      topRequests.forEach(req => {
+        const d = new Date(req.created_at);
+        const dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        const timeStr = d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+
+        tbody.innerHTML += `
+      <tr class="hover:bg-surface-container-low/60 transition-colors border-t border-outline-variant/20">
+        <td class="py-4 px-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[20px]">description</span>
+            </div>
+            <div class="flex flex-col min-w-0">
+              <span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">${req.document_name}</span>
+              <div class="flex items-center gap-2 mt-0.5">
+                <span class="font-code-sm text-code-sm text-outline">${req.tracking_code}</span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4 font-body-sm text-body-sm text-on-surface whitespace-nowrap">
+          ${dateStr}
+          <span class="block font-label-sm text-label-sm text-outline">${timeStr}</span>
+        </td>
+        <td class="py-4 px-4 whitespace-nowrap">
+          ${getStatusStyle(req.status)}
+        </td>
+        <td class="py-4 px-4 text-right whitespace-nowrap">
+          <button class="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" onclick="window.location.href='request-tracker.html'" type="button">
+            Details
+          </button>
+        </td>
+      </tr>`;
+      });
+    }
+
+    function openHistoryModal() {
+      const modal = document.getElementById('history-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+
+      const tbody = document.getElementById('history-modal-tbody');
+      tbody.innerHTML = '';
+
+      if (userRequests.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="3" class="text-center py-6 text-on-surface-variant font-body-sm">No history found.</td></tr>`;
+        return;
+      }
+
+      userRequests.forEach(req => {
+        const d = new Date(req.created_at);
+        const dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        const timeStr = d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+
+        tbody.innerHTML += `
+      <tr class="hover:bg-surface-container-low/60 transition-colors border-b border-surface-container">
+        <td class="py-3 px-4">
+          <div class="flex flex-col min-w-0">
+            <span class="font-headline-sm text-headline-sm text-on-surface font-semibold">${req.document_name}</span>
+            <span class="font-code-sm text-code-sm text-outline">${req.tracking_code}</span>
+          </div>
+        </td>
+        <td class="py-3 px-4 font-body-sm text-body-sm text-on-surface whitespace-nowrap">
+          ${dateStr} <span class="text-outline-variant text-[11px] ml-1">${timeStr}</span>
+        </td>
+        <td class="py-3 px-4 whitespace-nowrap">
+          ${getStatusStyle(req.status)}
+        </td>
+      </tr>`;
+      });
+    }
+
+    function closeHistoryModal() {
+      const modal = document.getElementById('history-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    loadDashboardRequests();
+  </script>
+</body>
+
+</html>

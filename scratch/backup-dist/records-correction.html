@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en" style="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_dashboard" name="shell-type">
+  <!-- Client-side Route Protection -->
+  <script>
+    (function () {
+      const role = window.localStorage.getItem('currentUserRole');
+      if (role !== 'student') {
+        window.location.replace('unauthorized.html');
+      }
+    })();
+  </script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { "darkMode": "class", "theme": { "extend": { "colors": { "on-primary-fixed-variant": "#891c1b", "secondary-fixed-dim": "#ffb77d", "tertiary": "#1f273b", "surface-container-high": "#e6e8ea", "on-secondary": "#ffffff", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#6e3900", "surface-dim": "#d8dadc", "on-tertiary-fixed": "#131b2e", "on-error-container": "#93000a", "outline-variant": "#dfbfbc", "inverse-primary": "#ffb3ac", "tertiary-fixed": "#dae2fd", "on-tertiary-fixed-variant": "#3f465c", "on-background": "#191c1e", "surface-container-highest": "#e0e3e5", "inverse-surface": "#2d3133", "tertiary-container": "#353d52", "surface-container": "#eceef0", "surface": "#f7f9fb", "error": "#ba1a1a", "surface-bright": "#f7f9fb", "error-container": "#ffdad6", "on-primary-fixed": "#410003", "on-tertiary": "#ffffff", "surface-container-low": "#f2f4f6", "on-error": "#ffffff", "on-primary-container": "#ff837a", "tertiary-fixed-dim": "#bec6e0", "background": "#f7f9fb", "on-surface": "#191c1e", "primary-container": "#7b1113", "surface-container-lowest": "#ffffff", "secondary-fixed": "#ffdcc3", "primary": "#570005", "on-tertiary-container": "#a0a8c1", "surface-variant": "#e0e3e5", "surface-tint": "#aa3530", "primary-fixed": "#ffdad6", "on-secondary-container": "#663500", "outline": "#8b716e", "on-secondary-fixed": "#2f1500", "on-surface-variant": "#58413f", "secondary-container": "#fe932c", "secondary": "#904d00", "inverse-on-surface": "#eff1f3", "primary-fixed-dim": "#ffb3ac" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter-lg": "2rem", "space-sm": "0.5rem", "gutter": "1.5rem", "margin-mobile": "1rem", "margin": "2rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "space-md": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-lg": ["Lora", "serif"], "headline-lg-mobile": ["Lora", "serif"], "body-lg": ["Libre Franklin", "sans-serif"], "headline-sm": ["Lora", "serif"], "body-md": ["Libre Franklin", "sans-serif"], "label-sm": ["Libre Franklin", "sans-serif"], "code-sm": ["JetBrains Mono"], "headline-xl": ["Lora", "serif"], "label-lg": ["Libre Franklin", "sans-serif"], "body-sm": ["Libre Franklin", "sans-serif"], "headline-xl-mobile": ["Lora", "serif"], "label-md": ["Libre Franklin", "sans-serif"], "headline-md": ["Lora", "serif"] }, "fontSize": { "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } };</script>
+</head>
+
+<body class="bg-background font-body-md text-on-surface antialiased">
+  <aside
+    class="fixed left-0 top-0 h-full w-72 text-on-primary z-50 flex flex-col justify-between shadow-2xl bg-primary">
+    <div class="flex flex-col">
+      <div class="h-16 flex items-center gap-space-sm px-space-lg"><img alt="USeP Seal Crest Logo"
+          class="h-8 w-auto object-contain brightness-0 invert" src="../src/assets/usep-logo-transparent.png">
+        <div class="flex flex-col min-w-0"><span
+            class="font-headline-sm text-headline-sm text-on-primary leading-tight truncate font-bold">USeP
+            e-Registrar</span><span
+            class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Student Portal</span>
+        </div>
+      </div>
+      <div class="px-space-md py-space-sm">
+        <nav class="flex flex-col gap-space-xs mt-space-xs"><a
+            class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-black/20 hover:text-on-primary transition-colors"
+            data-path="dashboard-home" href="student.html"><span
+              class="material-symbols-outlined text-[20px]">home</span><span class="font-body-md text-body-md">Dashboard
+              Home</span></a><a
+            class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-black/20 hover:text-on-primary transition-colors"
+            data-path="document-requests" href="document-requests.html"><span
+              class="material-symbols-outlined text-[20px]">description</span><span
+              class="font-body-md text-body-md">Document Requests</span></a><a aria-current="page"
+            class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-surface-container-lowest text-primary font-headline-sm rounded-lg shadow-sm font-semibold"
+            data-path="records-correction" href="records-correction.html"><span
+              class="material-symbols-outlined text-[20px] text-primary">how_to_reg</span><span
+              class="font-body-md text-body-md font-bold">Records Correction</span></a><a
+            class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-black/20 hover:text-on-primary transition-colors"
+            data-path="request-tracker" href="request-tracker.html"><span
+              class="material-symbols-outlined text-[20px]">timelapse</span><span
+              class="font-body-md text-body-md">Request Tracker &amp; History</span></a></nav>
+      </div>
+    </div>
+    <div class="p-space-md m-space-md rounded-xl bg-primary-container">
+      <div class="flex items-center gap-space-sm">
+        <div
+          class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-headline-sm text-headline-sm shadow-sm font-bold">
+          JP</div>
+        <div class="flex flex-col min-w-0 flex-1"><span
+            class="font-headline-sm text-headline-sm text-on-primary truncate leading-tight font-semibold">Joshua
+            Pearce</span><span
+            class="font-code-sm text-code-sm text-secondary-fixed leading-tight">2021-04182</span><span
+            class="font-label-sm text-label-sm text-primary-fixed-dim truncate">BS Computer Science</span></div>
+      </div>
+      <div class="flex items-center justify-between mt-space-md pt-space-xs">
+        <div class="relative"><button
+            class="p-space-xs text-primary-fixed-dim hover:bg-black/30 hover:text-on-primary rounded-lg transition-colors flex items-center justify-center"
+            type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span
+            class="absolute top-0.5 right-0.5 w-2 h-2 rounded-full bg-secondary-container"></span></div><button
+          class="p-space-xs text-primary-fixed-dim hover:bg-black/30 hover:text-on-primary rounded-lg transition-colors flex items-center justify-center"
+          type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button>
+      </div>
+    </div>
+  </aside>
+  <div class="pl-72 flex flex-col min-h-screen">
+    <header
+      class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg">
+      <div class="flex items-center gap-space-sm"><img alt="USeP Seal Crest Logo" class="h-8 w-auto object-contain"
+          src="../src/assets/usep-logo-transparent.png"><span
+          class="font-headline-sm text-headline-sm text-primary font-bold">USeP Portal</span><span
+          class="text-outline-variant">/</span>
+        <div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-full"><span
+            class="material-symbols-outlined text-on-surface-variant text-[16px]">location_city</span><span
+            class="font-label-md text-label-md text-on-surface-variant">Obrero Campus - Main</span></div>
+      </div>
+      <div class="flex items-center gap-space-md">
+        <div
+          class="flex items-center gap-space-xs bg-secondary-fixed text-on-secondary-fixed px-space-md py-space-xs rounded-full shadow-sm">
+          <span class="material-symbols-outlined text-[16px]">school</span><span
+            class="font-label-md text-label-md">S.Y. 2026-2027 (1st Semester)</span>
+        </div><button onclick="window.localStorage.removeItem('currentUserRole'); window.location.href='login.html';"
+          class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors"
+          type="button"><span class="material-symbols-outlined text-[18px]">logout</span><span
+            class="font-label-md text-label-md font-semibold">Sign Out</span></button>
+      </div>
+    </header>
+    <main class="w-full pt-16 bg-background flex-1">
+      <div class="flex flex-col w-full">
+        <div class="px-gutter-lg py-gutter flex flex-col gap-space-lg max-w-7xl mx-auto w-full">
+
+          <!-- Header Section -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center gap-space-xs">
+                <span class="font-label-sm text-label-sm text-primary font-bold tracking-widest uppercase">Office of the
+                  University Registrar</span>
+                <span class="text-outline-variant font-code-sm text-code-sm">/</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Student Services</span>
+              </div>
+              <h1 class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">Student Records
+                Correction Request</h1>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+                Submit a formal request to update personal or academic records. USeP Registrar staff will evaluate your
+                supporting legal or academic documents.
+              </p>
+            </div>
+            <!-- Quick Step Tracker Indicator -->
+            <div
+              class="flex items-center gap-space-sm bg-surface-container-lowest p-space-xs rounded-xl shadow-sm self-start md:self-auto">
+              <div
+                class="flex items-center gap-space-xs px-space-sm py-space-xs bg-primary-container text-on-primary rounded-lg">
+                <span
+                  class="w-5 h-5 rounded-full bg-surface-container-lowest text-primary font-bold flex items-center justify-center text-[11px]">1</span>
+                <span class="font-label-md text-label-md font-semibold">Form Details</span>
+              </div>
+              <span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span>
+              <div class="flex items-center gap-space-xs px-space-sm py-space-xs text-on-surface-variant">
+                <span
+                  class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-semibold flex items-center justify-center text-[11px]">2</span>
+                <span class="font-label-md text-label-md">Staff Verification</span>
+              </div>
+            </div>
+          </div>
+          <!-- Main Content 2-Column Bento Layout -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+            <!-- Left Column: The Interactive Form (approx. 7.5 of 12 columns) -->
+            <div class="lg:col-span-8 flex flex-col gap-space-lg">
+              <div
+                class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-lg relative overflow-hidden">
+                <!-- Subtle decorative ambient tint -->
+                <div
+                  class="absolute -top-24 -right-24 w-72 h-72 bg-gradient-to-br from-primary-fixed/20 via-transparent to-transparent rounded-full blur-2xl pointer-events-none">
+                </div>
+                <!-- Form Header -->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm bg-surface-container-low/40 p-space-md rounded-lg">
+                  <div class="flex items-center gap-space-sm">
+                    <div
+                      class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+                      <span class="material-symbols-outlined text-[22px]">how_to_reg</span>
+                    </div>
+                    <div class="flex flex-col">
+                      <h2 class="font-headline-md text-headline-md text-on-surface font-bold">Correction Request Details
+                      </h2>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">Please ensure accurate data entry
+                        matching official credentials.</span>
+                    </div>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container text-on-surface-variant rounded-full text-left self-start sm:self-auto">
+                    <span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+                    <span class="font-label-sm text-label-sm uppercase">Active Intake Session</span>
+                  </div>
+                </div>
+                <form class="flex flex-col gap-space-lg" id="recordCorrectionForm" onsubmit="event.preventDefault();">
+                  <!-- Field 1: Category Selection -->
+                  <div class="flex flex-col gap-space-xs">
+                    <label
+                      class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-space-xs"
+                      for="correctionCategory">
+                      <span class="">Correction Category</span>
+                      <span class="text-error font-bold">*</span>
+                    </label>
+                    <div class="relative">
+                      <select
+                        class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-space-sm rounded-lg shadow-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface-container-low transition-all"
+                        id="correctionCategory">
+                        <option selected="" value="name">Name Spelling / Legal Correction (Surname, Given, Middle)
+                        </option>
+                        <option value="birthdate">Birthdate / PSA Demographic Alignment</option>
+                        <option value="curriculum">Curriculum / Subject Tagging Concern</option>
+                        <option value="civil-status">Civil Status &amp; Legal Contact Record Update</option>
+                      </select>
+                      <div
+                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-space-md text-on-surface-variant">
+                        <span class="material-symbols-outlined text-[20px]">arrow_drop_down</span>
+                      </div>
+                    </div>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">Select the specific ledger element
+                      requiring formal adjustment.</span>
+                  </div>
+                  <!-- Field 2: Readonly ID & Contact Number -->
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+                    <div class="flex flex-col gap-space-xs">
+                      <label
+                        class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-space-xs">
+                        <span class="">Student ID Number</span>
+                        <span class="material-symbols-outlined text-outline text-[16px]">lock</span>
+                      </label>
+                      <div
+                        class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-sm rounded-lg">
+                        <span class="material-symbols-outlined text-outline text-[18px]">badge</span>
+                        <input
+                          class="bg-transparent font-code-sm text-code-sm text-on-surface font-semibold w-full focus:outline-none cursor-not-allowed"
+                          readonly="" type="text" value="2021-04182">
+                        <span
+                          class="font-label-sm text-label-sm uppercase bg-surface-container-high px-space-xs py-0.5 rounded text-outline">Verified</span>
+                      </div>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">Locked to the authenticated active
+                        session account.</span>
+                    </div>
+                    <div class="flex flex-col gap-space-xs">
+                      <label
+                        class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-space-xs"
+                        for="contactNumber">
+                        <span class="">Official Contact Number</span>
+                        <span class="text-error font-bold">*</span>
+                      </label>
+                      <div
+                        class="flex items-center rounded-lg bg-surface-container-lowest shadow-sm focus-within:ring-2 focus-within:ring-primary overflow-hidden">
+                        <div
+                          class="bg-surface-container px-space-sm py-space-sm flex items-center gap-1 font-label-md text-label-md text-on-surface-variant">
+                          <span class="material-symbols-outlined text-[16px]">call</span>
+                          <span class="">+63</span>
+                        </div>
+                        <input
+                          class="w-full bg-transparent px-space-md py-space-sm font-body-md text-body-md text-on-surface focus:outline-none"
+                          id="contactNumber" placeholder="9XX XXX XXXX" type="tel" value="947 882 1094">
+                      </div>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">The registrar evaluator may send
+                        SMS status advisories.</span>
+                    </div>
+                  </div>
+                  <!-- Field 3: Current Record vs Proposed Corrected Record Split Card -->
+                  <div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-md">
+                    <div class="flex items-center justify-between">
+                      <span class="font-label-sm text-label-sm uppercase font-bold tracking-wider text-outline">Record
+                        Alignment Target</span>
+                      <span class="font-label-sm text-label-sm text-primary font-medium">Comparison Mode</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+                      <!-- Current Record on File -->
+                      <div class="flex flex-col gap-space-xs">
+                        <label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Current Record
+                          on Registrar File</label>
+                        <div class="bg-surface-container-high/80 p-space-md rounded-lg flex flex-col justify-center">
+                          <span class="font-code-sm text-code-sm text-outline-variant font-bold text-error">CURRENT AS
+                            PRINTED:</span>
+                          <span class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">JOSHUA
+                            PEARCE</span>
+                          <span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Status: Initial SIS
+                            matriculation format</span>
+                        </div>
+                      </div>
+                      <!-- Proposed Record Field -->
+                      <div class="flex flex-col gap-space-xs">
+                        <label
+                          class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold flex items-center justify-between"
+                          for="proposedRecord">
+                          <span class="">Proposed Corrected Record</span>
+                          <span class="text-error font-bold">*</span>
+                        </label>
+                        <div class="flex flex-col">
+                          <input
+                            class="w-full bg-surface-container-lowest text-on-surface font-headline-sm text-headline-sm px-space-md py-space-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface transition-all"
+                            id="proposedRecord" type="text" value="JOSH PIERCE">
+                          <div class="flex items-center gap-space-xs mt-1.5 text-secondary">
+                            <span class="material-symbols-outlined text-[16px]">info</span>
+                            <span class="font-body-sm text-body-sm">Spell out middle names in complete form without
+                              abbreviations.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Field 4: Detailed Justification -->
+                  <div class="flex flex-col gap-space-xs">
+                    <div class="flex items-center justify-between">
+                      <label
+                        class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-space-xs"
+                        for="reasonArea">
+                        <span class="">Detailed Justification &amp; Supporting Context</span>
+                        <span class="text-error font-bold">*</span>
+                      </label>
+                      <span class="font-code-sm text-code-sm text-on-surface-variant" id="charCounter">148 / 500
+                        characters</span>
+                    </div>
+                    <textarea
+                      class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md p-space-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all leading-relaxed"
+                      id="reasonArea" maxlength="500"
+                      placeholder="Describe the discrepancy clearly. Indicate if this correction is for diploma issuance, licensure examination, or birth certificate alignment..."
+                      rows="4">My official Philippine Statistics Authority (PSA) Certificate of Live Birth indicates my complete middle name as "MANUEL" instead of initial "M."</textarea>
+                    <div class="flex items-center justify-between text-on-surface-variant">
+                      <span class="font-body-sm text-body-sm">Provide specific references (e.g. PSA Registry Number,
+                        Board Exam requirements).</span>
+                      <span class="font-label-sm text-label-sm text-outline">Rich detail speeds up approval</span>
+                    </div>
+                  </div>
+                  <!-- Field 5: Supporting Document Upload Zone -->
+                  <div class="flex flex-col gap-space-xs">
+                    <div class="flex items-center justify-between">
+                      <label
+                        class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-space-xs">
+                        <span class="">Supporting Legal Document Upload</span>
+                        <span class="text-error font-bold">*</span>
+                      </label>
+                      <span class="font-label-sm text-label-sm text-primary font-semibold">Max size: 10 MB</span>
+                    </div>
+                    <!-- Upload Drag and Drop Container -->
+                    <div
+                      class="p-space-lg bg-surface-container-low rounded-xl flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container transition-all group">
+                      <div
+                        class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-sm mb-space-sm">
+                        <span class="material-symbols-outlined text-[28px]">cloud_upload</span>
+                      </div>
+                      <div class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                        Drag and drop legal credentials here, or <span class="text-primary underline">browse local
+                          files</span>
+                      </div>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-md">
+                        Attach your PSA Birth Certificate, Affidavit of Discrepancy, or Valid Government-Issued
+                        Identification.
+                      </p>
+                      <div class="flex items-center gap-space-md mt-space-md">
+                        <span
+                          class="font-code-sm text-code-sm bg-surface-container-highest px-space-sm py-1 rounded text-on-surface-variant">PDF</span>
+                        <span
+                          class="font-code-sm text-code-sm bg-surface-container-highest px-space-sm py-1 rounded text-on-surface-variant">JPG</span>
+                        <span
+                          class="font-code-sm text-code-sm bg-surface-container-highest px-space-sm py-1 rounded text-on-surface-variant">PNG</span>
+                      </div>
+                    </div>
+                    <!-- Attached File Preview Chip (Item already uploaded) -->
+                    <div
+                      class="mt-space-xs bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex items-center justify-between">
+                      <div class="flex items-center gap-space-sm min-w-0">
+                        <div
+                          class="w-9 h-9 rounded bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0">
+                          <span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+                        </div>
+                        <div class="flex flex-col min-w-0">
+                          <span
+                            class="font-label-lg text-label-lg text-on-surface truncate font-semibold">PSA_BirthCertificate_JuanDelaCruz.pdf</span>
+                          <div class="flex items-center gap-space-xs">
+                            <span class="font-code-sm text-code-sm text-outline">2.4 MB</span>
+                            <span class="text-outline-variant">•</span>
+                            <span class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-0.5">
+                              <span class="material-symbols-outlined text-[14px]">check_circle</span> Ready for
+                              submission
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-space-xs">
+                        <button
+                          class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors"
+                          title="View attached document" type="button">
+                          <span class="material-symbols-outlined text-[18px]">visibility</span>
+                        </button>
+                        <button class="p-space-xs rounded-lg text-error hover:bg-error-container transition-colors"
+                          title="Remove file" type="button">
+                          <span class="material-symbols-outlined text-[18px]">delete</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Affirmation Checkbox -->
+                  <div class="p-space-md bg-surface-container-low rounded-xl flex items-start gap-space-sm">
+                    <input checked="" class="mt-1 h-4 w-4 rounded text-primary focus:ring-primary cursor-pointer"
+                      id="affirmationCheckbox" type="checkbox">
+                    <label class="font-body-md text-body-md text-on-surface cursor-pointer select-none"
+                      for="affirmationCheckbox">
+                      I solemnly affirm under penalty of university academic sanctions that the information provided and
+                      attached credentials are authentic, genuine, and issued by authorized government and institutional
+                      authorities.
+                    </label>
+                  </div>
+                  <!-- Action Buttons -->
+                  <div class="flex flex-col-reverse sm:flex-row items-center justify-between gap-space-md pt-space-xs">
+                    <button
+                      class="w-full sm:w-auto px-space-lg py-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-headline-sm text-headline-sm shadow-sm hover:bg-surface-container transition-all flex items-center justify-center gap-space-xs"
+                      type="button">
+                      <span class="material-symbols-outlined text-[18px]">save</span>
+                      <span class="">Save Draft</span>
+                    </button>
+                    <div class="flex items-center gap-space-sm w-full sm:w-auto">
+                      <button
+                        class="w-full sm:w-auto px-space-lg py-space-sm rounded-lg bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-headline-sm shadow-md transition-all flex items-center justify-center gap-space-sm group"
+                        type="button">
+                        <span class="">Submit Correction Request</span>
+                        <span
+                          class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">send</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- Recent Records Activity Mini-Stream -->
+              <div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-md text-label-md uppercase tracking-wider text-outline font-bold">Past
+                    Activity Logs</span>
+                  <span class="font-code-sm text-code-sm text-on-surface-variant">Archived Updates: 1</span>
+                </div>
+                <div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+                  <div class="flex items-center gap-space-sm">
+                    <span class="material-symbols-outlined text-outline text-[20px]">history_edu</span>
+                    <div class="flex flex-col">
+                      <span class="font-label-md text-label-md text-on-surface font-semibold">Contact Email Correction
+                        (Obrero campus)</span>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">Completed on August 14, 2025 by
+                        Registrar Evaluator Ramos</span>
+                    </div>
+                  </div>
+                  <span
+                    class="font-label-sm text-label-sm px-space-sm py-0.5 rounded-full bg-surface-container-highest text-on-surface font-semibold">Resolved</span>
+                </div>
+              </div>
+            </div>
+            <!-- Right Column: Policy Guidelines, Checklist & Guidance Sidebar (approx. 4 of 12 columns) -->
+            <div class="lg:col-span-4 flex flex-col gap-space-lg sticky top-20">
+              <!-- Authority Guidance Card in USeP Maroon Styling -->
+              <div
+                class="bg-primary text-on-primary rounded-xl shadow-md p-space-lg flex flex-col gap-space-md relative overflow-hidden">
+                <!-- Subtly lit accent background -->
+                <div
+                  class="absolute top-0 right-0 w-36 h-36 bg-gradient-to-bl from-primary-container via-transparent to-transparent rounded-bl-full pointer-events-none opacity-50">
+                </div>
+                <!-- Header -->
+                <div class="flex items-center gap-space-sm">
+                  <div class="w-9 h-9 rounded-lg bg-on-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-secondary-fixed text-[22px]">edit_note</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed font-bold">Protocol
+                      Checklist</span>
+                    <h3 class="font-headline-md text-headline-md font-bold leading-tight">Before Submitting</h3>
+                  </div>
+                </div>
+                <!-- Rules List with authoritative visual treatment -->
+                <div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-surface-container-lowest/90 mt-1">
+                  <div class="flex items-start gap-space-sm bg-on-primary/5 p-space-xs rounded-lg">
+                    <span
+                      class="material-symbols-outlined text-secondary-fixed-dim text-[18px] flex-shrink-0 mt-0.5">verified</span>
+                    <span class=""><strong>PSA Baseline:</strong> Official student credentials must strictly correspond
+                      with your authenticated PSA/NSO Birth Certificate.</span>
+                  </div>
+                  <div class="flex items-start gap-space-sm bg-on-primary/5 p-space-xs rounded-lg">
+                    <span
+                      class="material-symbols-outlined text-secondary-fixed-dim text-[18px] flex-shrink-0 mt-0.5">badge</span>
+                    <span class=""><strong>Dual ID Rule:</strong> For name or birthdate amendments, an authenticated PSA
+                      Certificate plus two valid government IDs are mandatory.</span>
+                  </div>
+                  <div class="flex items-start gap-space-sm bg-on-primary/5 p-space-xs rounded-lg">
+                    <span
+                      class="material-symbols-outlined text-secondary-fixed-dim text-[18px] flex-shrink-0 mt-0.5">account_balance</span>
+                    <span class=""><strong>Department Tagging:</strong> Curriculum or subject code updates mandate
+                      explicit endorsement from your College Dean or Department Chair.</span>
+                  </div>
+                  <div class="flex items-start gap-space-sm bg-on-primary/5 p-space-xs rounded-lg">
+                    <span
+                      class="material-symbols-outlined text-secondary-fixed-dim text-[18px] flex-shrink-0 mt-0.5">timer</span>
+                    <span class=""><strong>Turnaround Time:</strong> Standard processing requires <strong>3–5 working
+                        days</strong> following comprehensive document authentication.</span>
+                  </div>
+                </div>
+                <!-- Visual divider via contrast -->
+                <div class="h-px bg-on-primary/15 my-space-xs"></div>
+                <!-- Progress summary metric card -->
+                <div class="bg-primary-container p-space-sm rounded-lg flex items-center justify-between">
+                  <div class="flex flex-col">
+                    <span class="font-label-sm text-label-sm text-secondary-fixed uppercase">Submission Status</span>
+                    <span class="font-headline-sm text-headline-sm text-on-primary font-bold">1 Document Attached</span>
+                  </div>
+                  <div
+                    class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-code-sm text-code-sm font-bold shadow-sm">
+                    ✓
+                  </div>
+                </div>
+              </div>
+              <!-- Campus Registrar Office Physical & Hotline Card -->
+              <div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+                <div class="flex items-center gap-space-sm">
+                  <div
+                    class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[18px]">support_agent</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-headline-sm text-headline-sm text-on-surface font-bold">Registrar Helpdesk</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">In-Person &amp; Telephony
+                      Support</span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-space-sm text-body-sm text-body-sm text-on-surface">
+                  <div class="flex items-start gap-space-sm">
+                    <span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">meeting_room</span>
+                    <div>
+                      <p class="font-label-md text-label-md text-on-surface font-bold">Physical Counter</p>
+                      <p class="text-on-surface-variant">Window 2, Ground Floor, USeP Administration Building, Obrero
+                        Main Campus</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-space-sm">
+                    <span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">call</span>
+                    <div>
+                      <p class="font-label-md text-label-md text-on-surface font-bold">Telephone Hotline</p>
+                      <p class="font-code-sm text-code-sm text-on-surface-variant">(082) 227-8192 loc 204</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-space-sm">
+                    <span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">schedule</span>
+                    <div>
+                      <p class="font-label-md text-label-md text-on-surface font-bold">Operating Hours</p>
+                      <p class="text-on-surface-variant">Monday to Friday: 8:00 AM – 5:00 PM</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Document Verification Infographic Preview -->
+                <div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-space-sm mt-space-xs">
+                  <span class="material-symbols-outlined text-secondary text-[28px]">policy</span>
+                  <div class="flex flex-col">
+                    <span class="font-label-sm text-label-sm font-bold text-on-surface">Data Privacy Act (RA
+                      10173)</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">Your personal data is encrypted and
+                      securely processed.</span>
+                  </div>
+                </div>
+              </div>
+              <!-- System Architecture Metadata -->
+              <div class="flex items-center justify-between px-space-xs font-code-sm text-code-sm text-outline">
+                <span class="">PORTAL VER: 4.8.2-OBRERO</span>
+                <span class="">CAMPUS ID: USeP-01</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        // Dynamic Character Counter for Reason Textarea
+        (function () {
+          const reasonArea = document.getElementById('reasonArea');
+          const charCounter = document.getElementById('charCounter');
+
+          if (reasonArea && charCounter) {
+            reasonArea.addEventListener('input', function () {
+              const length = this.value.length;
+              charCounter.textContent = length + ' / 500 characters';
+              if (length >= 480) {
+                charCounter.classList.add('text-error');
+              } else {
+                charCounter.classList.remove('text-error');
+              }
+            });
+          }
+
+          // Dynamic field context update on category switch
+          const categorySelect = document.getElementById('correctionCategory');
+          const proposedRecord = document.getElementById('proposedRecord');
+
+          if (categorySelect && proposedRecord) {
+            categorySelect.addEventListener('change', function () {
+              if (this.value === 'birthdate') {
+                proposedRecord.placeholder = 'YYYY-MM-DD (e.g. 2003-05-18)';
+              } else if (this.value === 'curriculum') {
+                proposedRecord.placeholder = 'e.g. BSCS Curriculum 2022 v2';
+              } else if (this.value === 'civil-status') {
+                proposedRecord.placeholder = 'e.g. MARRIED (Affidavit attached)';
+              } else {
+                proposedRecord.placeholder = 'JOSH PIERCE';
+              }
+            });
+          }
+        })();
+      </script>
+    </main>
+  </div>
+
+
+  <script src="portal-interactions.js"></script>
+</body>
+
+</html>

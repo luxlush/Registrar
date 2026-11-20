@@ -1,0 +1,837 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type">
+<!-- Client-side Route Protection -->
+<script>
+  (function() {
+    const role = window.localStorage.getItem('currentUserRole');
+    if (role !== 'student') {
+      window.location.replace('unauthorized.html');
+    }
+  })();
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode": "class", "theme": {"extend": {"colors": {"on-primary-fixed-variant": "#891c1b", "secondary-fixed-dim": "#ffb77d", "tertiary": "#1f273b", "surface-container-high": "#e6e8ea", "on-secondary": "#ffffff", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#6e3900", "surface-dim": "#d8dadc", "on-tertiary-fixed": "#131b2e", "on-error-container": "#93000a", "outline-variant": "#dfbfbc", "inverse-primary": "#ffb3ac", "tertiary-fixed": "#dae2fd", "on-tertiary-fixed-variant": "#3f465c", "on-background": "#191c1e", "surface-container-highest": "#e0e3e5", "inverse-surface": "#2d3133", "tertiary-container": "#353d52", "surface-container": "#eceef0", "surface": "#f7f9fb", "error": "#ba1a1a", "surface-bright": "#f7f9fb", "error-container": "#ffdad6", "on-primary-fixed": "#410003", "on-tertiary": "#ffffff", "surface-container-low": "#f2f4f6", "on-error": "#ffffff", "on-primary-container": "#ff837a", "tertiary-fixed-dim": "#bec6e0", "background": "#f7f9fb", "on-surface": "#191c1e", "primary-container": "#7b1113", "surface-container-lowest": "#ffffff", "secondary-fixed": "#ffdcc3", "primary": "#570005", "on-tertiary-container": "#a0a8c1", "surface-variant": "#e0e3e5", "surface-tint": "#aa3530", "primary-fixed": "#ffdad6", "on-secondary-container": "#663500", "outline": "#8b716e", "on-secondary-fixed": "#2f1500", "on-surface-variant": "#58413f", "secondary-container": "#fe932c", "secondary": "#904d00", "inverse-on-surface": "#eff1f3", "primary-fixed-dim": "#ffb3ac"}, "borderRadius": {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"}, "spacing": {"space-xs": "0.25rem", "gutter-lg": "2rem", "space-sm": "0.5rem", "gutter": "1.5rem", "margin-mobile": "1rem", "margin": "2rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "space-md": "1rem", "space-xl": "2.5rem"}, "fontFamily": {"headline-lg": ["Lora", "serif"], "headline-lg-mobile": ["Lora", "serif"], "body-lg": ["Libre Franklin", "sans-serif"], "headline-sm": ["Lora", "serif"], "body-md": ["Libre Franklin", "sans-serif"], "label-sm": ["Libre Franklin", "sans-serif"], "code-sm": ["JetBrains Mono"], "headline-xl": ["Lora", "serif"], "label-lg": ["Libre Franklin", "sans-serif"], "body-sm": ["Libre Franklin", "sans-serif"], "headline-xl-mobile": ["Lora", "serif"], "label-md": ["Libre Franklin", "sans-serif"], "headline-md": ["Lora", "serif"]}, "fontSize": {"headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}], "headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700"}], "code-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "headline-xl": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}], "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}], "headline-xl-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "800"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}], "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 text-on-primary z-50 flex flex-col justify-between shadow-2xl bg-primary"><div class="flex flex-col"><div class="h-16 flex items-center gap-space-sm px-space-lg"><img alt="USeP Seal Crest Logo" class="h-8 w-auto object-contain brightness-0 invert" src="../src/assets/usep-logo-transparent.png"><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-primary leading-tight truncate font-bold">USeP e-Registrar</span><span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Student Portal</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs mt-space-xs"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-black/20 hover:text-on-primary transition-colors" data-path="dashboard-home" href="student.html"><span class="material-symbols-outlined text-[20px]">home</span><span class="font-body-md text-body-md">Dashboard Home</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-surface-container-lowest text-primary font-headline-sm rounded-lg shadow-sm font-semibold" data-path="document-requests" href="document-requests.html"><span class="material-symbols-outlined text-[20px] text-primary">description</span><span class="font-body-md text-body-md font-bold">Document Requests</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-black/20 hover:text-on-primary transition-colors" data-path="records-correction" href="records-correction.html"><span class="material-symbols-outlined text-[20px]">how_to_reg</span><span class="font-body-md text-body-md">Records Correction</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-black/20 hover:text-on-primary transition-colors" data-path="request-tracker" href="request-tracker.html"><span class="material-symbols-outlined text-[20px]">timelapse</span><span class="font-body-md text-body-md">Request Tracker &amp; History</span></a></nav></div></div><div class="p-space-md m-space-md rounded-xl bg-primary-container"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-headline-sm text-headline-sm shadow-sm font-bold">JP</div><div class="flex flex-col min-w-0 flex-1"><span class="font-headline-sm text-headline-sm text-on-primary truncate leading-tight font-semibold">Joshua Pearce</span><span class="font-code-sm text-code-sm text-secondary-fixed leading-tight">2021-04182</span><span class="font-label-sm text-label-sm text-primary-fixed-dim truncate">BS Computer Science</span></div></div><div class="flex items-center justify-between mt-space-md pt-space-xs"><div class="relative"><button class="p-space-xs text-primary-fixed-dim hover:bg-black/30 hover:text-on-primary rounded-lg transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute top-0.5 right-0.5 w-2 h-2 rounded-full bg-secondary-container"></span></div><button class="p-space-xs text-primary-fixed-dim hover:bg-black/30 hover:text-on-primary rounded-lg transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-sm"><img alt="USeP Seal Crest Logo" class="h-8 w-auto object-contain" src="../src/assets/usep-logo-transparent.png"><span class="font-headline-sm text-headline-sm text-primary font-bold">USeP Portal</span><span class="text-outline-variant">/</span><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-full"><span class="material-symbols-outlined text-on-surface-variant text-[16px]">location_city</span><span class="font-label-md text-label-md text-on-surface-variant">Obrero Campus - Main</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-secondary-fixed text-on-secondary-fixed px-space-md py-space-xs rounded-full shadow-sm"><span class="material-symbols-outlined text-[16px]">school</span><span class="font-label-md text-label-md">S.Y. 2026-2027 (1st Semester)</span></div><button onclick="window.localStorage.removeItem('currentUserRole'); window.location.href='login.html';" class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">logout</span><span class="font-label-md text-label-md font-semibold">Sign Out</span></button></div></header><main class="w-full pt-16 bg-background flex-1"><div class="flex flex-col w-full">
+<!-- Interactive Document Requests Marketplace -->
+<div class="px-space-lg py-space-md lg:py-space-lg flex flex-col gap-space-lg max-w-[1520px] mx-auto w-full">
+<!-- Header & Filter Workspace -->
+<div class="flex flex-col gap-space-md">
+<!-- Title & Context Eyebrow -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Registrar Services • S.Y. 2026-2027</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-black tracking-tight">Document Requests &amp; Certifications</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mt-1">
+            Select official registrar documents, specify recipient or employment purpose, and submit requests with secure digital validation and flexible fulfillment.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-xl self-start md:self-auto shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+<span class="font-label-md text-label-md text-on-surface">Digital Authentication Ready</span>
+</div>
+</div>
+<!-- Search and Filter Bar -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col lg:flex-row items-center justify-between gap-space-sm">
+<!-- Filter Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto w-full lg:w-auto pb-1 lg:pb-0" id="filterContainer">
+<button class="filter-btn active-filter px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary font-bold shadow-sm whitespace-nowrap" data-filter="all" type="button">
+            All Documents (7)
+          </button>
+<button class="filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:bg-surface-container-high whitespace-nowrap" data-filter="academic" type="button">
+            Academic Records
+          </button>
+<button class="filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:bg-surface-container-high whitespace-nowrap" data-filter="enrollment" type="button">
+            Certifications
+          </button>
+<button class="filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:bg-surface-container-high whitespace-nowrap" data-filter="graduation" type="button">
+            Graduation &amp; Transfer
+          </button>
+</div>
+<!-- Search Input with Clear Action -->
+<div class="relative w-full lg:w-80">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="searchInput" placeholder="Search document name or keyword..." type="text">
+</div>
+</div>
+</div>
+<!-- Main Two-Column Layout (2.2fr Document Grid, 1fr Sticky Cart Drawer) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Document Marketplace Grid (Col 1-8) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Document Cards Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md" id="documentGrid">
+<!-- 1. Transcript of Records (TOR) - SELECTED DEFAULT -->
+<div class="doc-card group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-300 flex flex-col justify-between cursor-pointer ring-2 ring-primary-container shadow-md" data-category="academic" data-id="tor" data-name="Transcript of Records (TOR)" data-price="150" data-time="3-5 working days">
+<div>
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+                  Academic Records
+                </span>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₱150.00</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="material-symbols-outlined text-[20px] text-primary">history_edu</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Transcript of Records (TOR)</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Official academic records for employment, transfer, board examination (PRC), or graduate school admissions.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="font-code-sm text-code-sm">3–5 working days</span>
+</div>
+<div class="action-slot">
+                <span class="flex items-center gap-1 px-space-sm py-1 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm">
+                  <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                  <span class="">SELECTED</span>
+                </span>
+              </div>
+</div>
+</div>
+<!-- 2. Certificate of Enrollment (COE) -->
+<div class="doc-card group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between cursor-pointer" data-category="enrollment" data-id="coe" data-name="Certificate of Enrollment (COE)" data-price="80" data-time="1 working day (Instant e-Copy)">
+<div>
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+                  Enrollment &amp; Verification
+                </span>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₱80.00</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="material-symbols-outlined text-[20px] text-primary">badge</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Certificate of Enrollment (COE)</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Proof of active academic enrollment status, registered units, and matriculation for scholarships, SSS, or parent benefits.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-code-sm text-code-sm">Instant / 24h</span>
+</div>
+<div class="action-slot">
+                <button type="button" class="btn-select flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">add</span>
+                  <span class="">REQUEST NOW</span>
+                </button>
+              </div>
+</div>
+</div>
+<!-- 3. Certified Grades -->
+<div class="doc-card group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between cursor-pointer" data-category="academic" data-id="grades" data-name="Certificate of Grades / Grade Slip" data-price="100" data-time="2-3 working days">
+<div>
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+                  Academic Records
+                </span>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₱100.00</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="material-symbols-outlined text-[20px] text-primary">grading</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Certificate of Grades</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Official breakdown and certified transcript slip of semester GPA, subject completion marks, and class standings.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="font-code-sm text-code-sm">2–3 working days</span>
+</div>
+<div class="action-slot">
+                <button type="button" class="btn-select flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">add</span>
+                  <span class="">REQUEST NOW</span>
+                </button>
+              </div>
+</div>
+</div>
+<!-- 4. Certificate of Graduation -->
+<div class="doc-card group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between cursor-pointer" data-category="graduation" data-id="grad" data-name="Certificate of Graduation" data-price="100" data-time="3 working days">
+<div>
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+                  Graduation
+                </span>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₱100.00</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="material-symbols-outlined text-[20px] text-primary">school</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Certificate of Graduation</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Official certification verifying completion of all collegiate curriculum prerequisites and commencement clearance.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="font-code-sm text-code-sm">3 working days</span>
+</div>
+<div class="action-slot">
+                <button type="button" class="btn-select flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">add</span>
+                  <span class="">REQUEST NOW</span>
+                </button>
+              </div>
+</div>
+</div>
+<!-- 5. Diploma -->
+<div class="doc-card group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between cursor-pointer" data-category="graduation" data-id="diploma" data-name="Official Parchment Diploma / Re-issuance" data-price="350" data-time="7-10 working days">
+<div>
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+                  Graduation
+                </span>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₱350.00</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="material-symbols-outlined text-[20px] text-primary">workspace_premium</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Diploma Re-issue / Tracking</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Institutional parchment release, certified duplicate tracking, or authenticated replacement for lost diplomas.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="font-code-sm text-code-sm">7–10 working days</span>
+</div>
+<div class="action-slot">
+                <button type="button" class="btn-select flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">add</span>
+                  <span class="">REQUEST NOW</span>
+                </button>
+              </div>
+</div>
+</div>
+<!-- 6. Honorable Dismissal -->
+<div class="doc-card group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between cursor-pointer" data-category="graduation" data-id="dismissal" data-name="Honorable Dismissal / Transfer Credential" data-price="150" data-time="5 working days">
+<div>
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+                  Transfer Credentials
+                </span>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₱150.00</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="material-symbols-outlined text-[20px] text-primary">swap_horiz</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Honorable Dismissal</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Required official certification issued to students relinquishing student membership to transfer to other higher education institutions.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="font-code-sm text-code-sm">5 working days</span>
+</div>
+<div class="action-slot">
+                <button type="button" class="btn-select flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">add</span>
+                  <span class="">REQUEST NOW</span>
+                </button>
+              </div>
+</div>
+</div>
+<!-- 7. Document Authentication (CAV) -->
+<div class="doc-card group relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between cursor-pointer" data-category="enrollment" data-id="cav" data-name="Authentication / Certification of Documents (CAV)" data-price="80" data-time="2-3 working days">
+<div>
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+                  Certification
+                </span>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₱80.00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ copy</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="material-symbols-outlined text-[20px] text-primary">verified</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Authentication &amp; Certified Copies</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Certified true copies (CTC) with embossed dry seal and registrar verification for DFA Apostille or CHED CAV endorsement.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="font-code-sm text-code-sm">2–3 working days</span>
+</div>
+<div class="action-slot">
+                <button type="button" class="btn-select flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">add</span>
+                  <span class="">REQUEST NOW</span>
+                </button>
+              </div>
+</div>
+</div>
+<!-- Informational Policy Card -->
+<div class="relative bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-32 h-32 bg-primary/5 rounded-full pointer-events-none"></div>
+<div>
+<div class="flex items-center gap-space-xs text-primary mb-2">
+<span class="material-symbols-outlined text-[20px]">info</span>
+<span class="font-headline-sm text-headline-sm">Registrar Notice</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Clearance clearance is automatically cross-checked with the Library, Accounting, and College Dean’s Office prior to processing.
+              </p>
+</div>
+<div class="mt-4 flex items-center gap-2">
+<a class="font-label-md text-label-md text-primary font-bold hover:underline inline-flex items-center gap-1" href="#">
+                View University Clearance Guidelines
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Visual Institutional Guarantee Banner -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">policy</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">CHED &amp; PRC Recognized Credentials</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">All issued credentials bear digital QR verification linked to USeP Central Records.</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant font-code-sm text-code-sm rounded-full">ISO 9001:2015</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Sticky Request Summary & Transaction Drawer (Col 9-12) -->
+<div class="xl:col-span-4 sticky top-20 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-2xl shadow-md overflow-hidden transition-all duration-300">
+<!-- Drawer Maroon Header -->
+<div class="bg-primary-container text-on-primary p-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[22px]">receipt_long</span>
+<span class="font-headline-sm text-headline-sm font-bold">Request Details</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-on-primary/20 text-on-primary font-label-sm text-label-sm uppercase font-bold tracking-wider" id="selectedCountBadge">1 Item Selected</span>
+</div>
+<!-- Body Fields -->
+<div class="p-space-md flex flex-col gap-space-md">
+<!-- Selected Items List -->
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Selected Documents</span>
+<button class="font-label-sm text-label-sm text-error hover:underline" id="clearCartBtn" type="button">Clear All</button>
+</div>
+<div class="flex flex-col gap-2" id="cartItemsContainer"><div class="cart-item bg-surface-container-low p-space-sm rounded-xl flex items-center justify-between gap-space-xs" data-item-id="tor">
+            <div class="flex flex-col min-w-0">
+              <span class="font-headline-sm text-body-sm text-on-surface font-semibold truncate">Transcript of Records (TOR)</span>
+              <span class="font-code-sm text-code-sm text-outline">1 Copy • ₱150.00</span>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <span class="font-headline-sm text-body-sm text-primary font-bold">₱150.00</span>
+              <button type="button" class="remove-btn text-on-surface-variant hover:text-error p-1 rounded-lg transition-colors" data-id="tor" title="Remove">
+                <span class="material-symbols-outlined text-[18px]">close</span>
+              </button>
+            </div>
+          </div></div>
+</div>
+<!-- Purpose Dropdown -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold" for="purposeSelect">
+                Purpose of Request <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low px-space-md py-2.5 pr-10 rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" id="purposeSelect">
+<option selected="" value="employment">Employment / Job Application</option>
+<option value="scholarship">Scholarship / Financial Assistance</option>
+<option value="prc">Board Examination (PRC Filing)</option>
+<option value="gradschool">Graduate Studies / Further Education</option>
+<option value="travel">Immigration / Overseas Visa</option>
+<option value="transfer">Transfer to Other College/University</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Fulfillment Method Picker -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+                Fulfillment Method
+              </span>
+<div class="grid grid-cols-2 gap-2 p-1 bg-surface-container-low rounded-xl">
+<button class="fulfillment-btn active-method py-2 px-space-sm rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 bg-primary-container text-on-primary font-bold shadow-sm" id="methodPickup" type="button">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+<span class="">Campus Pick-up</span>
+</button>
+<button class="fulfillment-btn py-2 px-space-sm rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface" id="methodDelivery" type="button">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+<span class="">Courier Delivery</span>
+</button>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant mt-0.5" id="pickupLocationNote">
+                Location: Window 3, University Registrar, Obrero Main Campus
+              </span>
+</div>
+<!-- Payment Method Segmented Pickers -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+                Payment Channel
+              </span>
+<div class="grid grid-cols-2 gap-2">
+<button class="pay-btn active-pay flex items-center justify-center gap-2 p-2 rounded-xl bg-primary-container text-on-primary text-label-md font-bold transition-all shadow-sm" type="button">
+<span class="font-headline-sm text-label-md">GCash</span>
+</button>
+<button class="pay-btn flex items-center justify-center gap-2 p-2 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container-high text-label-md font-semibold transition-all" type="button">
+<span class="font-headline-sm text-label-md">Maya</span>
+</button>
+<button class="pay-btn flex items-center justify-center gap-2 p-2 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container-high text-label-md font-semibold transition-all" type="button">
+<span class="font-headline-sm text-label-md">LandBank</span>
+</button>
+<button class="pay-btn flex items-center justify-center gap-2 p-2 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container-high text-label-md font-semibold transition-all" type="button">
+<span class="font-headline-sm text-label-md">Cashier On-Site</span>
+</button>
+</div>
+</div>
+<!-- Notes / Special Instructions -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold" for="orderNotes">
+                Special Remarks / Addressed To (Optional)
+              </label>
+<textarea class="w-full bg-surface-container-low px-space-sm py-2 rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary-container resize-none" id="orderNotes" placeholder="e.g. Attn: HR Dept, ACME Corp. Please seal in official envelope." rows="2"></textarea>
+</div>
+<!-- Financial Aggregation Breakdown -->
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col gap-2 mt-1">
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="">Items Subtotal</span>
+<span class="font-headline-sm text-body-sm text-on-surface font-semibold" id="subtotalText">₱150.00</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="">Registrar Processing Fee</span>
+<span class="font-code-sm text-code-sm text-primary">Waived (Online)</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span id="fulfillmentFeeLabel" class="">Pick-up Logistics</span>
+<span class="font-code-sm text-code-sm text-on-surface" id="fulfillmentFee">₱0.00</span>
+</div>
+<div class="h-px bg-surface-container-high my-0.5"></div>
+<div class="flex items-baseline justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Total Assessment</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary font-black" id="grandTotalText">₱150.00</span>
+</div>
+</div>
+</div>
+<!-- Submission CTA -->
+<button class="w-full py-3.5 px-space-md rounded-xl bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-headline-sm font-bold transition-all shadow-lg flex items-center justify-center gap-2 group" id="btnSubmitOrder" type="button">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">lock</span>
+<span class="">Proceed to Checkout</span>
+</button>
+<!-- Verification / Trust Subtext -->
+<div class="flex items-start gap-2 text-on-surface-variant text-center justify-center px-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0 mt-0.5">security</span>
+<p class="font-label-sm text-label-sm text-outline text-left">
+                Secured transaction under the Philippine Republic Act 8792 (E-Commerce Act). Documents will be queued upon payment receipt.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Client-Side Dynamic Behavior Script -->
+<script>
+    (function() {
+      // Data state
+      const state = {
+        selectedItems: [
+          { id: 'tor', name: 'Transcript of Records (TOR)', price: 150, copies: 1 }
+        ],
+        fulfillment: 'pickup',
+        payment: 'GCash'
+      };
+
+      const docGrid = document.getElementById('documentGrid');
+      const cartContainer = document.getElementById('cartItemsContainer');
+      const selectedCountBadge = document.getElementById('selectedCountBadge');
+      const subtotalText = document.getElementById('subtotalText');
+      const grandTotalText = document.getElementById('grandTotalText');
+      const fulfillmentFee = document.getElementById('fulfillmentFee');
+      const fulfillmentFeeLabel = document.getElementById('fulfillmentFeeLabel');
+      const pickupLocationNote = document.getElementById('pickupLocationNote');
+      const clearCartBtn = document.getElementById('clearCartBtn');
+
+      function calculateTotals() {
+        const subtotal = state.selectedItems.reduce((acc, item) => acc + (item.price * item.copies), 0);
+        const deliveryFee = state.fulfillment === 'delivery' ? 120 : 0;
+        const grandTotal = subtotal + deliveryFee;
+
+        subtotalText.textContent = `₱${subtotal.toFixed(2)}`;
+        fulfillmentFee.textContent = `₱${deliveryFee.toFixed(2)}`;
+        grandTotalText.textContent = `₱${grandTotal.toFixed(2)}`;
+        
+        const count = state.selectedItems.length;
+        selectedCountBadge.textContent = `${count} ${count === 1 ? 'Item' : 'Items'} Selected`;
+
+        renderCart();
+      }
+
+      function renderCart() {
+        cartContainer.innerHTML = '';
+        if (state.selectedItems.length === 0) {
+          cartContainer.innerHTML = `
+            <div class="py-4 text-center text-outline font-body-sm text-body-sm">
+              No documents selected yet.<br>Click any document to add.
+            </div>
+          `;
+          return;
+        }
+
+        state.selectedItems.forEach(item => {
+          const itemEl = document.createElement('div');
+          itemEl.className = 'cart-item bg-surface-container-low p-space-sm rounded-xl flex items-center justify-between gap-space-xs';
+          itemEl.dataset.itemId = item.id;
+          itemEl.innerHTML = `
+            <div class="flex flex-col min-w-0">
+              <span class="font-headline-sm text-body-sm text-on-surface font-semibold truncate">${item.name}</span>
+              <span class="font-code-sm text-code-sm text-outline">${item.copies} Copy • ₱${item.price.toFixed(2)}</span>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <span class="font-headline-sm text-body-sm text-primary font-bold">₱${(item.price * item.copies).toFixed(2)}</span>
+              <button type="button" class="remove-btn text-on-surface-variant hover:text-error p-1 rounded-lg transition-colors" data-id="${item.id}" title="Remove">
+                <span class="material-symbols-outlined text-[18px]">close</span>
+              </button>
+            </div>
+          `;
+          cartContainer.appendChild(itemEl);
+        });
+
+        // Bind remove buttons
+        cartContainer.querySelectorAll('.remove-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const id = btn.dataset.id;
+            removeItem(id);
+          });
+        });
+      }
+
+      function updateCardVisuals() {
+        const cards = document.querySelectorAll('.doc-card');
+        cards.forEach(card => {
+          const id = card.dataset.id;
+          const isSelected = state.selectedItems.some(i => i.id === id);
+          const actionSlot = card.querySelector('.action-slot');
+
+          if (isSelected) {
+            card.classList.add('ring-2', 'ring-primary-container', 'shadow-md');
+            if (actionSlot) {
+              actionSlot.innerHTML = `
+                <span class="flex items-center gap-1 px-space-sm py-1 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm">
+                  <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                  <span>SELECTED</span>
+                </span>
+              `;
+            }
+          } else {
+            card.classList.remove('ring-2', 'ring-primary-container', 'shadow-md');
+            if (actionSlot) {
+              actionSlot.innerHTML = `
+                <button type="button" class="btn-select flex items-center gap-1 px-space-sm py-1 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">add</span>
+                  <span>REQUEST NOW</span>
+                </button>
+              `;
+            }
+          }
+        });
+      }
+
+      function toggleItem(id, name, price) {
+        const existingIdx = state.selectedItems.findIndex(i => i.id === id);
+        if (existingIdx > -1) {
+          state.selectedItems.splice(existingIdx, 1);
+        } else {
+          state.selectedItems.push({ id, name, price: parseFloat(price), copies: 1 });
+        }
+        calculateTotals();
+        updateCardVisuals();
+      }
+
+      function removeItem(id) {
+        state.selectedItems = state.selectedItems.filter(i => i.id !== id);
+        calculateTotals();
+        updateCardVisuals();
+      }
+
+      // Add click listeners to cards
+      document.querySelectorAll('.doc-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const id = card.dataset.id;
+          const name = card.dataset.name;
+          const price = card.dataset.price;
+          toggleItem(id, name, price);
+        });
+      });
+
+      // Clear all
+      clearCartBtn.addEventListener('click', () => {
+        state.selectedItems = [];
+        calculateTotals();
+        updateCardVisuals();
+      });
+
+      // Fulfillment Toggle
+      const methodPickup = document.getElementById('methodPickup');
+      const methodDelivery = document.getElementById('methodDelivery');
+
+      methodPickup.addEventListener('click', () => {
+        state.fulfillment = 'pickup';
+        methodPickup.className = 'fulfillment-btn active-method py-2 px-space-sm rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 bg-primary-container text-on-primary font-bold shadow-sm';
+        methodDelivery.className = 'fulfillment-btn py-2 px-space-sm rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface';
+        fulfillmentFeeLabel.textContent = 'Pick-up Logistics';
+        pickupLocationNote.textContent = 'Location: Window 3, University Registrar, Obrero Main Campus';
+        calculateTotals();
+      });
+
+      methodDelivery.addEventListener('click', () => {
+        state.fulfillment = 'delivery';
+        methodDelivery.className = 'fulfillment-btn active-method py-2 px-space-sm rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 bg-primary-container text-on-primary font-bold shadow-sm';
+        methodPickup.className = 'fulfillment-btn py-2 px-space-sm rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-on-surface';
+        fulfillmentFeeLabel.textContent = 'LBC Standard Courier';
+        pickupLocationNote.textContent = 'Standard Door-to-Door Delivery (3-5 days after document generation)';
+        calculateTotals();
+      });
+
+      // Payment toggles
+      const payButtons = document.querySelectorAll('.pay-btn');
+      payButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          payButtons.forEach(b => {
+            b.className = 'pay-btn flex items-center justify-center gap-2 p-2 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container-high text-label-md font-semibold transition-all';
+          });
+          btn.className = 'pay-btn active-pay flex items-center justify-center gap-2 p-2 rounded-xl bg-primary-container text-on-primary text-label-md font-bold transition-all shadow-sm';
+        });
+      });
+
+      // Category filter buttons
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.className = 'filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:bg-surface-container-high whitespace-nowrap';
+          });
+          btn.className = 'filter-btn active-filter px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary font-bold shadow-sm whitespace-nowrap';
+
+          const filter = btn.dataset.filter;
+          document.querySelectorAll('.doc-card').forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // Keyword search
+      const searchInput = document.getElementById('searchInput');
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        document.querySelectorAll('.doc-card').forEach(card => {
+          const name = (card.dataset.name || '').toLowerCase();
+          const category = (card.dataset.category || '').toLowerCase();
+          if (name.includes(query) || category.includes(query)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+
+      // Submission to API via Modal
+      document.getElementById('btnSubmitOrder').addEventListener('click', () => {
+        if (state.selectedItems.length === 0) {
+          alert('Please select at least one document before submitting.');
+          return;
+        }
+        const userStr = window.localStorage.getItem('currentUser');
+        if (!userStr) {
+          alert('Please log in again to submit requests.');
+          return;
+        }
+        
+        const user = JSON.parse(userStr);
+        if (!user || !user.id) {
+          alert('Session expired or corrupted. Please log in again.');
+          window.localStorage.removeItem('currentUser');
+          window.localStorage.removeItem('currentUserRole');
+          window.location.href = 'index.html';
+          return;
+        }
+
+        // Determine active payment method from DOM
+        let paymentMethod = 'cashier';
+        document.querySelectorAll('.pay-btn').forEach(b => {
+          if (b.classList.contains('active-pay')) {
+            if (b.innerText.toLowerCase().includes('cashier')) paymentMethod = 'cashier';
+            if (b.innerText.toLowerCase().includes('landbank')) paymentMethod = 'online';
+            if (b.innerText.toLowerCase().includes('gcash')) paymentMethod = 'gcash';
+            if (b.innerText.toLowerCase().includes('maya')) paymentMethod = 'maya';
+          }
+        });
+
+        showPaymentModal(paymentMethod, user);
+      });
+
+      function showPaymentModal(method, user) {
+        let modal = document.getElementById('payment-modal');
+        if (!modal) {
+          modal = document.createElement('div');
+          modal.id = 'payment-modal';
+          modal.className = 'fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm p-4';
+          modal.innerHTML = `
+            <div class="bg-surface-container-lowest rounded-2xl shadow-2xl max-w-md w-full overflow-hidden flex flex-col transform transition-all">
+              <div class="bg-primary-container text-on-primary p-space-md flex items-center justify-between">
+                <div class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-[22px]">payments</span>
+                  <span class="font-headline-sm text-headline-sm font-bold">Secure Checkout</span>
+                </div>
+                <button type="button" id="close-payment-modal-btn" class="text-on-primary hover:text-white transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">close</span>
+                </button>
+              </div>
+              <div class="p-space-md flex flex-col gap-space-md" id="payment-modal-body">
+              </div>
+              <div class="p-space-md border-t border-surface-container-high flex justify-end">
+                <button type="button" id="confirm-payment-btn" class="w-full py-3 rounded-xl bg-primary hover:bg-primary-container text-white font-headline-sm text-headline-sm font-bold transition-all shadow-md flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-[20px]" id="confirm-payment-icon">lock</span>
+                  <span id="confirm-payment-text">Confirm Payment</span>
+                </button>
+              </div>
+            </div>
+          `;
+          document.body.appendChild(modal);
+          
+          document.getElementById('close-payment-modal-btn').addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+          });
+
+          document.getElementById('confirm-payment-btn').addEventListener('click', async (e) => {
+             const btn = e.currentTarget;
+             btn.disabled = true;
+             document.getElementById('confirm-payment-icon').textContent = 'refresh';
+             document.getElementById('confirm-payment-icon').classList.add('animate-spin');
+             document.getElementById('confirm-payment-text').textContent = 'Processing...';
+
+             try {
+               const response = await fetch('api/submit_request.php', {
+                 method: 'POST',
+                 headers: { 'Content-Type': 'application/json' },
+                 body: JSON.stringify({
+                   student_id: btn.dataset.userId,
+                   fulfillment_method: state.fulfillment,
+                   payment_method: btn.dataset.method,
+                   items: state.selectedItems.map(i => i.id)
+                 })
+               });
+               
+               const result = await response.json();
+               if (result.success) {
+                 state.selectedItems = [];
+                 calculateTotals();
+                 updateCardVisuals();
+                 window.location.href = 'request-tracker.html';
+               } else {
+                 alert(result.message || 'Error submitting request.');
+               }
+             } catch (err) {
+               console.error(err);
+               alert('A network error occurred.');
+             } finally {
+               btn.disabled = false;
+               document.getElementById('confirm-payment-icon').textContent = 'lock';
+               document.getElementById('confirm-payment-icon').classList.remove('animate-spin');
+               document.getElementById('confirm-payment-text').textContent = 'Confirm Payment';
+             }
+          });
+        }
+
+        const body = document.getElementById('payment-modal-body');
+        const confirmBtn = document.getElementById('confirm-payment-btn');
+        const total = document.getElementById('grandTotalText').textContent;
+        
+        confirmBtn.dataset.method = method;
+        confirmBtn.dataset.userId = user.id;
+
+        let instructions = '';
+        if (method === 'gcash' || method === 'maya') {
+          instructions = `
+            <div class="flex flex-col items-center justify-center text-center gap-3">
+              <div class="w-16 h-16 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary mb-2">
+                <span class="material-symbols-outlined text-[32px]">qr_code_scanner</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Scan to Pay via ${method.toUpperCase()}</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Please pay the exact amount of <strong class="text-primary">${total}</strong>.</p>
+              <div class="w-full bg-surface-container-low p-4 rounded-xl border border-surface-container-high border-dashed mt-2 flex flex-col items-center justify-center h-32">
+                 <span class="material-symbols-outlined text-outline text-[48px] opacity-20">qr_code_2</span>
+                 <span class="font-label-sm text-label-sm text-outline mt-2">QR Code Placeholder</span>
+              </div>
+            </div>
+          `;
+        } else if (method === 'online') {
+          instructions = `
+            <div class="flex flex-col gap-3 text-center items-center justify-center">
+              <div class="w-16 h-16 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary mb-2">
+                <span class="material-symbols-outlined text-[32px]">account_balance</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">LandBank ePayment</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">You will be securely routed to the LandBank ePayment Portal to complete your transaction of <strong class="text-primary">${total}</strong>.</p>
+            </div>
+          `;
+        } else {
+          instructions = `
+            <div class="flex flex-col gap-3 text-center items-center justify-center">
+              <div class="w-16 h-16 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary mb-2">
+                <span class="material-symbols-outlined text-[32px]">point_of_sale</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Pay at Cashier On-Site</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Please present your Tracking Code to the University Cashier (Window 1) and pay <strong class="text-primary">${total}</strong> to initiate processing.</p>
+            </div>
+          `;
+        }
+
+        body.innerHTML = instructions;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+
+      // Initial state render
+      calculateTotals();
+      updateCardVisuals();
+    })();
+  </script>
+</div></main></div>
+
+
+<script src="portal-interactions.js"></script>
+</body></html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type">
+<!-- Client-side Route Protection -->
+<script>
+  (function() {
+    const role = window.localStorage.getItem('currentUserRole');
+    if (role !== 'student') {
+      window.location.replace('unauthorized.html');
+    }
+  })();
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode": "class", "theme": {"extend": {"colors": {"on-primary-fixed-variant": "#891c1b", "secondary-fixed-dim": "#ffb77d", "tertiary": "#1f273b", "surface-container-high": "#e6e8ea", "on-secondary": "#ffffff", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#6e3900", "surface-dim": "#d8dadc", "on-tertiary-fixed": "#131b2e", "on-error-container": "#93000a", "outline-variant": "#dfbfbc", "inverse-primary": "#ffb3ac", "tertiary-fixed": "#dae2fd", "on-tertiary-fixed-variant": "#3f465c", "on-background": "#191c1e", "surface-container-highest": "#e0e3e5", "inverse-surface": "#2d3133", "tertiary-container": "#353d52", "surface-container": "#eceef0", "surface": "#f7f9fb", "error": "#ba1a1a", "surface-bright": "#f7f9fb", "error-container": "#ffdad6", "on-primary-fixed": "#410003", "on-tertiary": "#ffffff", "surface-container-low": "#f2f4f6", "on-error": "#ffffff", "on-primary-container": "#ff837a", "tertiary-fixed-dim": "#bec6e0", "background": "#f7f9fb", "on-surface": "#191c1e", "primary-container": "#7b1113", "surface-container-lowest": "#ffffff", "secondary-fixed": "#ffdcc3", "primary": "#570005", "on-tertiary-container": "#a0a8c1", "surface-variant": "#e0e3e5", "surface-tint": "#aa3530", "primary-fixed": "#ffdad6", "on-secondary-container": "#663500", "outline": "#8b716e", "on-secondary-fixed": "#2f1500", "on-surface-variant": "#58413f", "secondary-container": "#fe932c", "secondary": "#904d00", "inverse-on-surface": "#eff1f3", "primary-fixed-dim": "#ffb3ac"}, "borderRadius": {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"}, "spacing": {"space-xs": "0.25rem", "gutter-lg": "2rem", "space-sm": "0.5rem", "gutter": "1.5rem", "margin-mobile": "1rem", "margin": "2rem", "space-lg": "1.5rem", "gutter-sm": "1rem", "space-md": "1rem", "space-xl": "2.5rem"}, "fontFamily": {"headline-lg": ["Lora", "serif"], "headline-lg-mobile": ["Lora", "serif"], "body-lg": ["Libre Franklin", "sans-serif"], "headline-sm": ["Lora", "serif"], "body-md": ["Libre Franklin", "sans-serif"], "label-sm": ["Libre Franklin", "sans-serif"], "code-sm": ["JetBrains Mono"], "headline-xl": ["Lora", "serif"], "label-lg": ["Libre Franklin", "sans-serif"], "body-sm": ["Libre Franklin", "sans-serif"], "headline-xl-mobile": ["Lora", "serif"], "label-md": ["Libre Franklin", "sans-serif"], "headline-md": ["Lora", "serif"]}, "fontSize": {"headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}], "headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700"}], "code-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "headline-xl": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}], "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}], "headline-xl-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "800"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}], "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 text-on-primary z-50 flex flex-col justify-between shadow-2xl bg-primary"><div class="flex flex-col"><div class="h-16 flex items-center gap-space-sm px-space-lg"><img alt="USeP Seal Crest Logo" class="h-8 w-auto object-contain brightness-0 invert" src="../src/assets/usep-logo-transparent.png"><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-primary leading-tight truncate font-bold">USeP e-Registrar</span><span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Student Portal</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs mt-space-xs"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-black/20 hover:text-on-primary transition-colors" data-path="dashboard-home" href="student.html"><span class="material-symbols-outlined text-[20px]">home</span><span class="font-body-md text-body-md">Dashboard Home</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-black/20 hover:text-on-primary transition-colors" data-path="document-requests" href="document-requests.html"><span class="material-symbols-outlined text-[20px]">description</span><span class="font-body-md text-body-md">Document Requests</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-black/20 hover:text-on-primary transition-colors" data-path="records-correction" href="records-correction.html"><span class="material-symbols-outlined text-[20px]">how_to_reg</span><span class="font-body-md text-body-md">Records Correction</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-surface-container-lowest text-primary font-headline-sm rounded-lg shadow-sm font-semibold" data-path="request-tracker" href="request-tracker.html"><span class="material-symbols-outlined text-[20px] text-primary">timelapse</span><span class="font-body-md text-body-md font-bold">Request Tracker &amp; History</span></a></nav></div></div><div class="p-space-md m-space-md rounded-xl bg-primary-container"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-headline-sm text-headline-sm shadow-sm font-bold">JP</div><div class="flex flex-col min-w-0 flex-1"><span class="font-headline-sm text-headline-sm text-on-primary truncate leading-tight font-semibold">Joshua Pearce</span><span class="font-code-sm text-code-sm text-secondary-fixed leading-tight">2021-04182</span><span class="font-label-sm text-label-sm text-primary-fixed-dim truncate">BS Computer Science</span></div></div><div class="flex items-center justify-between mt-space-md pt-space-xs"><div class="relative"><button class="p-space-xs text-primary-fixed-dim hover:bg-black/30 hover:text-on-primary rounded-lg transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute top-0.5 right-0.5 w-2 h-2 rounded-full bg-secondary-container"></span></div><button class="p-space-xs text-primary-fixed-dim hover:bg-black/30 hover:text-on-primary rounded-lg transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-sm"><img alt="USeP Seal Crest Logo" class="h-8 w-auto object-contain" src="../src/assets/usep-logo-transparent.png"><span class="font-headline-sm text-headline-sm text-primary font-bold">USeP Portal</span><span class="text-outline-variant">/</span><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-full"><span class="material-symbols-outlined text-on-surface-variant text-[16px]">location_city</span><span class="font-label-md text-label-md text-on-surface-variant">Obrero Campus - Main</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-secondary-fixed text-on-secondary-fixed px-space-md py-space-xs rounded-full shadow-sm"><span class="material-symbols-outlined text-[16px]">school</span><span class="font-label-md text-label-md">S.Y. 2026-2027 (1st Semester)</span></div><button onclick="window.localStorage.removeItem('currentUserRole'); window.location.href='login.html';" class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">logout</span><span class="font-label-md text-label-md font-semibold">Sign Out</span></button></div></header><main class="w-full pt-16 bg-background flex-1"><div class="flex flex-col w-full">
+<div class="p-space-lg max-w-[1440px] mx-auto w-full space-y-space-lg">
+<!-- Header Section -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Document Tracking Module</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span class="font-code-sm text-code-sm text-outline">Real-time Telemetry</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">Request Tracker &amp; Transaction History</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Track the real-time review progress, document signing, and release availability of your submitted requests with full audit integrity.
+        </p>
+</div>
+<!-- Quick Document Submission CTA -->
+<div class="flex items-center gap-space-sm self-start lg:self-center">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-lowest text-on-surface font-label-lg text-label-lg rounded-lg shadow-sm hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span class="">Export Summary</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:opacity-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add_task</span>
+<span class="">New Document Request</span>
+</button>
+</div>
+</div>
+<!-- Metric Counters (Stat Grid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Total Requests -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-between">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Submissions</span>
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">04</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Academic Year 2026-2027</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">folder_shared</span>
+</div>
+</div>
+<!-- In Progress -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-between">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">In Progress</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-secondary font-bold">01</span>
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Sealing &amp; Authentication</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[24px]">pending</span>
+</div>
+</div>
+<!-- Ready for Pick-up -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-between">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Ready for Pick-Up</span>
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">01</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Window 3, Main Campus</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+</div>
+<!-- Completed -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-between">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Completed / Released</span>
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">02</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Archive available</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[24px]">task_alt</span>
+</div>
+</div>
+</div>
+<!-- Active Detailed Stepper Card (Highlighted Transaction) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg space-y-space-lg relative overflow-hidden">
+<!-- Ambient decorative gradient bar -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-secondary to-primary-container"></div>
+<!-- Tracker Head Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Live Tracking
+            </span>
+<span class="font-code-sm text-code-sm font-bold text-primary">USEP-2026-8812</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Submitted on Oct 12, 2026 - 10:14 AM</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Official Transcript of Records (TOR)</h2>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">For Employment</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container text-on-surface font-label-md text-label-md rounded-lg hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+<span class="">View Receipt (#REC-9821)</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span class="">Request Inquiries</span>
+</button>
+</div>
+</div>
+<!-- Stepper Component -->
+<div class="py-space-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md relative">
+<!-- Step 1: Completed -->
+<div class="flex flex-col space-y-space-xs relative">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm shadow-sm z-10">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div class="hidden md:block flex-1 h-1 bg-primary rounded-full"></div>
+</div>
+<div class="pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Step 1 • Completed</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">Payment &amp; Filing</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validated via LandBank e-Payment on Oct 12, 10:14 AM</p>
+</div>
+</div>
+<!-- Step 2: Completed -->
+<div class="flex flex-col space-y-space-xs relative">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm shadow-sm z-10">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div class="hidden md:block flex-1 h-1 bg-secondary rounded-full"></div>
+</div>
+<div class="pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Step 2 • Completed</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">Academic Clearance</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Passed CIT Dean &amp; Library checks on Oct 13, 02:30 PM</p>
+</div>
+</div>
+<!-- Step 3: Active In-Progress -->
+<div class="flex flex-col space-y-space-xs relative">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-primary flex items-center justify-center font-headline-sm shadow-sm ring-4 ring-secondary-fixed z-10">
+<span class="material-symbols-outlined text-[20px] animate-spin">sync</span>
+</div>
+<div class="hidden md:block flex-1 h-1 bg-surface-container-high rounded-full"></div>
+</div>
+<div class="pt-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Step 3 • Processing</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">Printing &amp; Dry Seal</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Affixing University Security Seal (Est. Oct 15, 2026)</p>
+</div>
+</div>
+<!-- Step 4: Pending -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-outline flex items-center justify-center font-headline-sm z-10">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+</div>
+<div class="pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold tracking-wider">Step 4 • Final</span>
+<p class="font-headline-sm text-headline-sm text-outline">Ready for Pick-Up</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pending Registrar Counter Release confirmation</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Stepper Status Details Callout -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">store</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Release Location &amp; Instructions</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Claim at <strong class="text-primary font-bold">Registrar Window 3</strong> (Main Admin Bldg). Bring your Valid Student ID and official payment receipt <span class="font-code-sm text-code-sm bg-surface-container px-1 py-0.5 rounded">#REC-9821</span>.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-stretch md:self-auto justify-end">
+<span class="font-label-sm text-label-sm text-outline">Authorized Signatory:</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Dr. Eleanor Vance (Univ. Registrar)</span>
+</div>
+</div>
+</div>
+<!-- Search & Filter Controls -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative flex-1 max-w-lg">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-space-xs bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline" id="table-search-input" placeholder="Filter by Ref #, Document name, or keyword..." type="text">
+</div>
+<!-- Segmented Status Badges / Filter -->
+<div class="flex flex-wrap items-center gap-space-xs" id="status-filter-group">
+<button class="filter-btn active-filter px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-primary-container text-on-primary transition-colors" data-filter="all" type="button">
+          All Requests (4)
+        </button>
+<button class="filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors" data-filter="in-progress" type="button">
+          In Progress (1)
+        </button>
+<button class="filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors" data-filter="for-pickup" type="button">
+          Ready for Pick-Up (1)
+        </button>
+<button class="filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors" data-filter="completed" type="button">
+          Completed (2)
+        </button>
+</div>
+<!-- Date Dropdown -->
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low rounded-lg text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span class="">S.Y. 2026-2027</span>
+</div>
+</div>
+</div>
+<!-- Requests Table View -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left" id="requests-table">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-md px-space-lg">Reference &amp; Date</th>
+<th class="py-space-md px-space-lg">Requested Document</th>
+<th class="py-space-md px-space-lg">Purpose / Category</th>
+<th class="py-space-md px-space-lg">Fee Paid</th>
+<th class="py-space-md px-space-lg">Current Status</th>
+<th class="py-space-md px-space-lg text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0" id="requests-table-body">
+<!-- Row 1: TOR (Processing) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors request-row" data-status="in-progress">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-primary">USEP-2026-8812</span>
+<span class="font-body-sm text-body-sm text-outline">Oct 12, 2026 • 10:14 AM</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Official Transcript of Records (TOR)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Complete Academic Transcript (Undergraduate)</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="font-body-md text-body-md text-on-surface">Employment</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">₱150.00</span>
+<span class="font-label-sm text-label-sm text-secondary">Paid (LandBank)</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+                  In Progress
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:opacity-90 transition-opacity" type="button">
+                    View Timeline
+                  </button>
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant" title="Print Official Receipt" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: COE (Ready for Pick-Up) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors request-row" data-status="for-pickup">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-primary">USEP-2026-8401</span>
+<span class="font-body-sm text-body-sm text-outline">Oct 05, 2026 • 09:30 AM</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Certificate of Enrollment (COE)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Semester Certification with Unit Breakdown</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="font-body-md text-body-md text-on-surface">CHED Scholarship</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">₱80.00</span>
+<span class="font-label-sm text-label-sm text-secondary">Paid (GCash OTC)</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Ready for Pick-Up
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+                    Claiming Slip
+                  </button>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span class="">e-Copy</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Records Correction (Completed) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors request-row" data-status="completed">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-primary">USEP-CORR-019</span>
+<span class="font-body-sm text-body-sm text-outline">Sep 28, 2026 • 03:15 PM</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Student Record Correction</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Name Spelling Rectification (Middle Name)</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="font-body-md text-body-md text-on-surface">Registrar Update</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">₱0.00</span>
+<span class="font-label-sm text-label-sm text-outline">Free Service</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+                  Approved &amp; Updated
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" type="button">
+                    Registrar Note
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Honorable Dismissal (Completed / Released) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors request-row" data-status="completed">
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-bold text-primary">USEP-2026-7290</span>
+<span class="font-body-sm text-body-sm text-outline">Aug 14, 2026 • 11:20 AM</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Honorable Dismissal &amp; Credentials</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Archived Student Clearance Docket</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="font-body-md text-body-md text-on-surface">Institutional Transfer</span>
+</td>
+<td class="py-space-md px-space-lg">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">₱150.00</span>
+<span class="font-label-sm text-label-sm text-outline">Archived Receipt</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container text-outline font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">archive</span>
+                  Released / Closed
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" type="button">
+                    View Dossier
+                  </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Footer Bar inside Table Card -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span class="">Showing 4 of 4 total transactions</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container text-outline cursor-not-allowed font-label-md text-label-md" disabled="" type="button">Previous</button>
+<span class="px-space-sm py-1 bg-primary text-on-primary rounded font-label-md text-label-md font-bold">1</span>
+<button class="px-space-sm py-1 rounded bg-surface-container text-outline cursor-not-allowed font-label-md text-label-md" disabled="" type="button">Next</button>
+</div>
+</div>
+</div>
+<!-- Quick Help & Clearance Note Callout Banner -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+<span class="">Standard Processing Times</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Certificates and clearances take 2-3 business days. Official Transcripts (TOR) take 5-7 business days for security watermark embossing.
+        </p>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+<span class="">Claiming Requirements</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Representatives must present a formal Notarized Special Power of Attorney (SPA), valid photo ID of the student, and ID of the authorized proxy.
+        </p>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">help_center</span>
+<span class="">Need Registrar Support?</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Contact <span class="font-code-sm text-code-sm text-primary">registrar@usep.edu.ph</span> or visit Counter 1, Ground Floor Administration Building.
+        </p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const searchInput = document.getElementById('table-search-input');
+    const filterButtons = document.querySelectorAll('#status-filter-group .filter-btn');
+    const tableBody = document.getElementById('requests-table-body');
+    let allRequests = [];
+    let currentFilter = 'all';
+
+    async function loadRequests() {
+      try {
+        const userStr = window.localStorage.getItem('currentUser');
+        if (!userStr) return;
+        const user = JSON.parse(userStr);
+
+        const response = await fetch('api/student_requests.php?student_id=' + user.id);
+        const data = await response.json();
+        if (data.success) {
+          allRequests = data.requests;
+          updateTabCounts();
+          renderTable();
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    function updateTabCounts() {
+      let inProgress = 0;
+      let pickup = 0;
+      let completed = 0;
+      allRequests.forEach(req => {
+        if (['Completed', 'Declined'].includes(req.status)) completed++;
+        else if (req.status === 'Ready for Pickup') pickup++;
+        else inProgress++; // Pending Review, Processing
+      });
+
+      const btnAll = document.querySelector('button[data-filter="all"]');
+      const btnInProgress = document.querySelector('button[data-filter="in-progress"]');
+      const btnPickup = document.querySelector('button[data-filter="for-pickup"]');
+      const btnCompleted = document.querySelector('button[data-filter="completed"]');
+
+      if (btnAll) btnAll.textContent = `All Requests (${allRequests.length})`;
+      if (btnInProgress) btnInProgress.textContent = `In Progress (${inProgress})`;
+      if (btnPickup) btnPickup.textContent = `Ready for Pick-Up (${pickup})`;
+      if (btnCompleted) btnCompleted.textContent = `Completed (${completed})`;
+    }
+
+    function renderTable() {
+      const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
+      tableBody.innerHTML = '';
+
+      const filtered = allRequests.filter(req => {
+        let statusTag = 'in-progress'; // default mapped to "In Progress"
+        if (req.status === 'Completed') statusTag = 'completed';
+        else if (req.status === 'Declined') statusTag = 'completed'; // wait, no tab for declined, let's put it with completed or all
+        else if (req.status === 'Pending Review') statusTag = 'in-progress';
+        else if (req.status === 'Processing') statusTag = 'in-progress';
+        else if (req.status === 'Ready for Pickup') statusTag = 'for-pickup';
+        
+        const matchesFilter = currentFilter === 'all' || statusTag === currentFilter;
+        const matchesQuery = !query || 
+          (req.tracking_code && req.tracking_code.toLowerCase().includes(query)) ||
+          (req.document_name && req.document_name.toLowerCase().includes(query));
+
+        return matchesFilter && matchesQuery;
+      });
+
+      if (filtered.length === 0) {
+        tableBody.innerHTML = '<tr><td colspan="6" class="py-space-md text-center text-on-surface-variant font-body-md">No requests found.</td></tr>';
+        return;
+      }
+
+      filtered.forEach(req => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-surface-container-low/50 transition-colors request-row';
+
+        let statusBadge = '';
+        if (req.status === 'Processing') {
+          statusBadge = `<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-on-primary animate-ping"></span> Processing</span>`;
+        } else if (req.status === 'Ready for Pickup') {
+          statusBadge = `<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Ready for Pick-Up</span>`;
+        } else if (req.status === 'Completed') {
+          statusBadge = `<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md font-semibold"><span class="material-symbols-outlined text-[14px]">done_all</span> Completed</span>`;
+        } else if (req.status === 'Pending Review') {
+          statusBadge = `<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-semibold"><span class="material-symbols-outlined text-[14px]">schedule</span> Pending Review</span>`;
+        } else {
+          statusBadge = `<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container text-outline font-label-md text-label-md font-semibold"><span class="material-symbols-outlined text-[14px]">archive</span> Declined</span>`;
+        }
+
+        const date = new Date(req.created_at).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+        tr.innerHTML = `
+          <td class="py-space-md px-space-lg">
+            <div class="flex flex-col">
+              <span class="font-code-sm text-code-sm font-bold text-primary">${req.tracking_code}</span>
+              <span class="font-body-sm text-body-sm text-outline">${date}</span>
+            </div>
+          </td>
+          <td class="py-space-md px-space-lg">
+            <div class="flex items-center gap-space-sm">
+              <div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[18px]">description</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-headline-sm text-headline-sm text-on-surface">${req.document_name}</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">${req.document_category}</span>
+              </div>
+            </div>
+          </td>
+          <td class="py-space-md px-space-lg">
+            <span class="font-body-md text-body-md text-on-surface">${req.fulfillment_method === 'pickup' ? 'Campus Pick-up' : 'Courier Delivery'}</span>
+          </td>
+          <td class="py-space-md px-space-lg">
+            <div class="flex flex-col">
+              <span class="font-code-sm text-code-sm font-semibold text-on-surface">₱${parseFloat(req.total_fee || 0).toFixed(2)}</span>
+            </div>
+          </td>
+          <td class="py-space-md px-space-lg">
+            ${statusBadge}
+          </td>
+          <td class="py-space-md px-space-lg text-right">
+            <button class="btn-details px-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" type="button" data-id="${req.id}">Details</button>
+          </td>
+        `;
+        tableBody.appendChild(tr);
+      });
+      // Attach details modal listeners
+      document.querySelectorAll('.btn-details').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const reqId = parseInt(e.currentTarget.getAttribute('data-id'));
+          const req = allRequests.find(r => r.id === reqId);
+          if (req) showModal(req);
+        });
+      });
+    }
+
+    // Modal creation and logic
+    function showModal(req) {
+      let modal = document.getElementById('details-modal');
+      if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'details-modal';
+        modal.className = 'fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm p-4';
+        modal.innerHTML = `
+          <div class="bg-surface-container-lowest rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden flex flex-col transform transition-all">
+            <div class="bg-primary-container text-on-primary p-space-md flex items-center justify-between">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-[22px]">receipt_long</span>
+                <span class="font-headline-sm text-headline-sm font-bold">Request Details</span>
+              </div>
+              <button type="button" id="close-modal-btn" class="text-on-primary hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-[20px]">close</span>
+              </button>
+            </div>
+            <div class="p-space-md flex flex-col gap-space-md" id="modal-body-content"></div>
+          </div>
+        `;
+        document.body.appendChild(modal);
+        document.getElementById('close-modal-btn').addEventListener('click', () => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        });
+      }
+
+      const date = new Date(req.created_at).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+      const method = req.fulfillment_method === 'pickup' ? 'Campus Pick-up' : 'Courier Delivery';
+      
+      document.getElementById('modal-body-content').innerHTML = `
+        <div class="flex flex-col gap-2">
+          <div class="flex justify-between items-center border-b border-surface-container-high pb-2">
+            <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Tracking Code</span>
+            <span class="font-code-sm text-code-sm font-bold text-primary">${req.tracking_code}</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-surface-container-high pb-2">
+            <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Date Requested</span>
+            <span class="font-body-sm text-body-sm text-on-surface">${date}</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-surface-container-high pb-2">
+            <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Document</span>
+            <span class="font-headline-sm text-body-sm font-semibold text-on-surface text-right">${req.document_name}</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-surface-container-high pb-2">
+            <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Fulfillment</span>
+            <span class="font-body-sm text-body-sm text-on-surface">${method}</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-surface-container-high pb-2">
+            <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Fee</span>
+            <span class="font-headline-sm text-body-sm font-bold text-primary">₱${parseFloat(req.total_fee || 0).toFixed(2)}</span>
+          </div>
+          <div class="flex justify-between items-center pt-2">
+            <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Status</span>
+            <span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold">${req.status}</span>
+          </div>
+        </div>
+      `;
+      
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    if (searchInput) searchInput.addEventListener('input', renderTable);
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-primary-container', 'text-on-primary');
+          b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+        this.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        this.classList.add('bg-primary-container', 'text-on-primary');
+
+        currentFilter = this.getAttribute('data-filter');
+        renderTable();
+      });
+    });
+
+    loadRequests();
+  })();
+</script></main></div>
+
+
+<script src="portal-interactions.js"></script>
+</body></html>

@@ -1,0 +1,1754 @@
+[
+ {
+  "page": "index.html",
+  "w": 320,
+  "overflow": false,
+  "sw": 320,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 14,
+  "small": [
+   "a[Sign In] 60x36",
+   "a[USeP e-Registrar\nO] 288x40",
+   "a[Home] 40x17",
+   "a[Services] 56x17",
+   "a[How It Works] 87x17",
+   "a[Track Request] 94x17",
+   "a[Transcript of Reco] 140x17",
+   "a[Certificate of Enr] 160x17",
+   "a[Diploma & Graduati] 143x17",
+   "a[Records Correction] 127x17",
+   "a[Facebook] 64x17",
+   "a[Instagram] 66x17",
+   "a[X (former Twitter)] 115x17",
+   "a[YouTube] 57x17"
+  ],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "index.html",
+  "w": 390,
+  "overflow": false,
+  "sw": 390,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 15,
+  "small": [
+   "a[USeP e-Registrar\nO] 241x40",
+   "a[Sign In] 62x36",
+   "a[USeP e-Registrar\nO] 358x40",
+   "a[Home] 40x17",
+   "a[Services] 56x17",
+   "a[How It Works] 87x17",
+   "a[Track Request] 94x17",
+   "a[Transcript of Reco] 140x17",
+   "a[Certificate of Enr] 160x17",
+   "a[Diploma & Graduati] 143x17",
+   "a[Records Correction] 127x17",
+   "a[Facebook] 64x17",
+   "a[Instagram] 66x17",
+   "a[X (former Twitter)] 115x17",
+   "a[YouTube] 57x17"
+  ],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "index.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 18,
+  "small": [
+   "a[USeP e-Registrar\nO] 241x40",
+   "a[Services] 57x20",
+   "a[How It Works] 88x20",
+   "a[Track Request] 95x20",
+   "a[Sign In] 62x36",
+   "a[USeP e-Registrar\nO] 720x40",
+   "a[Home] 40x17",
+   "a[Services] 56x17",
+   "a[How It Works] 87x17",
+   "a[Track Request] 94x17",
+   "a[Transcript of Reco] 140x17",
+   "a[Certificate of Enr] 160x17",
+   "a[Diploma & Graduati] 143x17",
+   "a[Records Correction] 127x17",
+   "a[Facebook] 64x17",
+   "a[Instagram] 66x17",
+   "a[X (former Twitter)] 115x17",
+   "a[YouTube] 57x17"
+  ],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "index.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 18,
+  "small": [
+   "a[USeP e-Registrar\nO] 241x40",
+   "a[Services] 57x20",
+   "a[How It Works] 88x20",
+   "a[Track Request] 95x20",
+   "a[Sign In] 62x36",
+   "a[USeP e-Registrar\nO] 493x40",
+   "a[Home] 40x17",
+   "a[Services] 56x17",
+   "a[How It Works] 87x17",
+   "a[Track Request] 94x17",
+   "a[Transcript of Reco] 140x17",
+   "a[Certificate of Enr] 160x17",
+   "a[Diploma & Graduati] 143x17",
+   "a[Records Correction] 127x17",
+   "a[Facebook] 64x17",
+   "a[Instagram] 66x17",
+   "a[X (former Twitter)] 115x17",
+   "a[YouTube] 57x17"
+  ],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "login.html",
+  "w": 320,
+  "overflow": false,
+  "sw": 320,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 3,
+  "small": [
+   "button[Student Login] 71x38",
+   "button[Admin Portal] 61x38",
+   "button[Toggle password vi] 16x16"
+  ],
+  "fs16": [
+   "input#student-email:14px",
+   "input#student-password:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "login.html",
+  "w": 390,
+  "overflow": false,
+  "sw": 390,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 3,
+  "small": [
+   "button[Student Login] 71x38",
+   "button[Admin Portal] 61x38",
+   "button[Toggle password vi] 16x16"
+  ],
+  "fs16": [
+   "input#student-email:14px",
+   "input#student-password:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "login.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 4,
+  "small": [
+   "button[Student Login] 114x38",
+   "button[Admin Portal] 114x38",
+   "button[Toggle password vi] 16x16",
+   "a[← Go back to landi] 162x16"
+  ],
+  "fs16": [
+   "input#student-email:14px",
+   "input#student-password:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "login.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 5,
+  "small": [
+   "a[USeP e-Registrar\nO] 275x38",
+   "button[Student Login] 184x38",
+   "button[Admin Portal] 184x38",
+   "button[Toggle password vi] 16x16",
+   "a[← Go back to landi] 162x16"
+  ],
+  "fs16": [
+   "input#student-email:14px",
+   "input#student-password:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "unauthorized.html",
+  "w": 320,
+  "overflow": false,
+  "sw": 320,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 0,
+  "small": [],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "unauthorized.html",
+  "w": 390,
+  "overflow": false,
+  "sw": 390,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 0,
+  "small": [],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "unauthorized.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 0,
+  "small": [],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "unauthorized.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 0,
+  "small": [],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "student.html",
+  "w": 320,
+  "overflow": true,
+  "sw": 495,
+  "nOff": 76,
+  "offenders": [
+   "header.fixed.top-0.left-72 r=336",
+   "div.flex.items-center.gap-space-sm r=474",
+   "img.h-8.w-auto.object-contain r=344",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506"
+  ],
+  "nSmall": 7,
+  "small": [
+   "a[home\nDashboard] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[close] 18x25"
+  ],
+  "fs16": [
+   "input#catalog-search:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "student.html",
+  "w": 390,
+  "overflow": true,
+  "sw": 495,
+  "nOff": 38,
+  "offenders": [
+   "div.flex.items-center.gap-space-sm r=474",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506",
+   "span.material-symbols-outlined.text-on-surface-variant.text-[16px] r=444",
+   "span.font-label-md.text-label-md.text-on-surface-variant r=498"
+  ],
+  "nSmall": 9,
+  "small": [
+   "a[home\nDashboard] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "input[catalog-search] 80x42",
+   "button[close] 18x25",
+   "button[download\nGet PDF] 41x28"
+  ],
+  "fs16": [
+   "input#catalog-search:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "student.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 11,
+  "small": [
+   "a[home\nDashboard] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 50x32",
+   "input[catalog-search] 384x42",
+   "button[close] 18x25",
+   "button[download\nGet PDF] 50x28",
+   "button[View All History] 98x16"
+  ],
+  "fs16": [
+   "input#catalog-search:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "student.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 11,
+  "small": [
+   "a[home\nDashboard] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "input[catalog-search] 359x42",
+   "button[close] 18x25",
+   "button[download\nGet PDF] 53x28",
+   "button[View All History] 98x16"
+  ],
+  "fs16": [
+   "input#catalog-search:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "document-requests.html",
+  "w": 320,
+  "overflow": true,
+  "sw": 539,
+  "nOff": 128,
+  "offenders": [
+   "header.fixed.top-0.left-72 r=336",
+   "div.flex.items-center.gap-space-sm r=474",
+   "img.h-8.w-auto.object-contain r=344",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506"
+  ],
+  "nSmall": 6,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28"
+  ],
+  "fs16": [
+   "input#searchInput:13px",
+   "select#purposeSelect:13px",
+   "textarea#orderNotes:13px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "document-requests.html",
+  "w": 390,
+  "overflow": true,
+  "sw": 539,
+  "nOff": 77,
+  "offenders": [
+   "div.flex.items-center.gap-space-sm r=474",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506",
+   "span.material-symbols-outlined.text-on-surface-variant.text-[16px] r=444",
+   "span.font-label-md.text-label-md.text-on-surface-variant r=498"
+  ],
+  "nSmall": 18,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[All Documents (7)] 142x24",
+   "input[searchInput] 56x34",
+   "button[add\nREQUEST NOW] 94x36",
+   "select[Employment / Job A] 56x38",
+   "button[storefront\nCampus ] 16x48",
+   "button[local_shipping\nCou] 16x48",
+   "button[GCash] 16x32",
+   "button[Maya] 16x32",
+   "button[LandBank] 16x64",
+   "button[Cashier On-Site] 16x64",
+   "textarea[orderNotes] 22x52",
+   "button[lock\nProceed to Ch] 32x100"
+  ],
+  "fs16": [
+   "input#searchInput:13px",
+   "select#purposeSelect:13px",
+   "textarea#orderNotes:13px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "document-requests.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 28,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 50x32",
+   "button[All Documents (7)] 142x24",
+   "button[Academic Records] 146x24",
+   "button[Certifications] 117x24",
+   "button[Graduation & Trans] 169x24",
+   "input[searchInput] 416x34",
+   "button[add\nREQUEST NOW] 107x36",
+   "button[add\nREQUEST NOW] 95x36",
+   "button[add\nREQUEST NOW] 100x36",
+   "button[add\nREQUEST NOW] 94x36",
+   "button[add\nREQUEST NOW] 100x36",
+   "button[add\nREQUEST NOW] 95x36",
+   "a[View University Cl] 176x32",
+   "button[Clear All] 51x14",
+   "button[close] 26x33",
+   "select[Employment / Job A] 400x38",
+   "button[storefront\nCampus ] 192x34",
+   "button[local_shipping\nCou] 192x34",
+   "button[GCash] 196x32",
+   "button[Maya] 196x32",
+   "button[LandBank] 196x32",
+   "button[Cashier On-Site] 196x32"
+  ],
+  "fs16": [
+   "input#searchInput:13px",
+   "select#purposeSelect:13px",
+   "textarea#orderNotes:13px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "document-requests.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 26,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[All Documents (7)] 142x24",
+   "button[Academic Records] 146x24",
+   "button[Certifications] 117x24",
+   "button[Graduation & Trans] 169x24",
+   "input[searchInput] 320x34",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "button[add\nREQUEST NOW] 127x24",
+   "a[View University Cl] 251x16",
+   "button[Clear All] 51x14",
+   "button[close] 26x33",
+   "select[Employment / Job A] 267x38",
+   "button[GCash] 129x32",
+   "button[Maya] 129x32",
+   "button[LandBank] 129x32",
+   "button[Cashier On-Site] 129x32"
+  ],
+  "fs16": [
+   "input#searchInput:13px",
+   "select#purposeSelect:13px",
+   "textarea#orderNotes:13px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "records-correction.html",
+  "w": 320,
+  "overflow": true,
+  "sw": 555,
+  "nOff": 170,
+  "offenders": [
+   "header.fixed.top-0.left-72 r=336",
+   "div.flex.items-center.gap-space-sm r=474",
+   "img.h-8.w-auto.object-contain r=344",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506"
+  ],
+  "nSmall": 6,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28"
+  ],
+  "fs16": [
+   "select#correctionCategory:14px",
+   "input#contactNumber:14px",
+   "textarea#reasonArea:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "records-correction.html",
+  "w": 390,
+  "overflow": true,
+  "sw": 555,
+  "nOff": 46,
+  "offenders": [
+   "div.flex.items-center.gap-space-sm r=474",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506",
+   "span.material-symbols-outlined.text-on-surface-variant.text-[16px] r=444",
+   "span.font-label-md.text-label-md.text-on-surface-variant r=498"
+  ],
+  "nSmall": 12,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "select[Name Spelling / Le] 32x38",
+   "input[proposedRecord] 32x56",
+   "textarea[reasonArea] 32x123",
+   "button[visibility] 26x33",
+   "button[delete] 26x33",
+   "input[affirmationCheckbo] 13x16"
+  ],
+  "fs16": [
+   "select#correctionCategory:14px",
+   "input#contactNumber:14px",
+   "textarea#reasonArea:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "records-correction.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 13,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 50x32",
+   "select[Name Spelling / Le] 368x38",
+   "input[text] 52x16",
+   "input[contactNumber] 116x38",
+   "button[visibility] 26x33",
+   "button[delete] 26x33",
+   "input[affirmationCheckbo] 13x16"
+  ],
+  "fs16": [
+   "select#correctionCategory:14px",
+   "input#:12px",
+   "input#contactNumber:14px",
+   "textarea#reasonArea:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "records-correction.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 15,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "select[Name Spelling / Le] 563x38",
+   "input[text] 150x16",
+   "input[contactNumber] 213x38",
+   "button[visibility] 26x33",
+   "button[delete] 26x33",
+   "input[affirmationCheckbo] 13x16",
+   "button[save\nSave Draft] 149x40",
+   "button[Submit Correction ] 280x40"
+  ],
+  "fs16": [
+   "select#correctionCategory:14px",
+   "input#:12px",
+   "input#contactNumber:14px",
+   "textarea#reasonArea:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "request-tracker.html",
+  "w": 320,
+  "overflow": true,
+  "sw": 564,
+  "nOff": 112,
+  "offenders": [
+   "header.fixed.top-0.left-72 r=336",
+   "div.flex.items-center.gap-space-sm r=474",
+   "img.h-8.w-auto.object-contain r=344",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506"
+  ],
+  "nSmall": 7,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[Previous] 70x24"
+  ],
+  "fs16": [
+   "input#table-search-input:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "request-tracker.html",
+  "w": 390,
+  "overflow": true,
+  "sw": 564,
+  "nOff": 50,
+  "offenders": [
+   "div.flex.items-center.gap-space-sm r=474",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506",
+   "span.material-symbols-outlined.text-on-surface-variant.text-[16px] r=444",
+   "span.font-label-md.text-label-md.text-on-surface-variant r=498"
+  ],
+  "nSmall": 10,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "input[table-search-input] 56x30",
+   "button[Completed (2)] 99x40",
+   "button[Previous] 70x24",
+   "button[Next] 45x24"
+  ],
+  "fs16": [
+   "input#table-search-input:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "request-tracker.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 17,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 50x32",
+   "button[download\nExport Su] 169x36",
+   "button[add_task\nNew Docum] 218x36",
+   "button[support_agent\nRequ] 106x40",
+   "input[table-search-input] 400x30",
+   "button[All Requests (4)] 129x24",
+   "button[In Progress (1)] 120x24",
+   "button[Ready for Pick-Up ] 160x24",
+   "button[Completed (2)] 119x24",
+   "button[Previous] 70x24",
+   "button[Next] 45x24"
+  ],
+  "fs16": [
+   "input#table-search-input:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "request-tracker.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 22,
+  "small": [
+   "a[home\nDashboard Hom] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[how_to_reg\nRecords] 256x38",
+   "a[timelapse\nRequest ] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[receipt_long\nView ] 214x24",
+   "button[support_agent\nRequ] 160x24",
+   "input[table-search-input] 191x30",
+   "button[All Requests (4)] 129x24",
+   "button[In Progress (1)] 120x24",
+   "button[Ready for Pick-Up ] 160x24",
+   "button[Completed (2)] 119x24",
+   "button[View Timeline] 102x24",
+   "button[print] 26x33",
+   "button[Claiming Slip] 75x40",
+   "button[file_download\ne-Co] 67x40",
+   "button[Registrar Note] 106x24",
+   "button[View Dossier] 96x24",
+   "button[Previous] 70x24",
+   "button[Next] 45x24"
+  ],
+  "fs16": [
+   "input#table-search-input:14px"
+  ],
+  "errors": []
+ },
+ {
+  "page": "admin.html",
+  "w": 320,
+  "overflow": true,
+  "sw": 524,
+  "nOff": 126,
+  "offenders": [
+   "header.fixed.top-0.left-72 r=336",
+   "div.flex.items-center.gap-space-sm r=474",
+   "img.h-8.w-auto.object-contain r=344",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506"
+  ],
+  "nSmall": 8,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28"
+  ],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "admin.html",
+  "w": 390,
+  "overflow": true,
+  "sw": 524,
+  "nOff": 85,
+  "offenders": [
+   "div.flex.items-center.gap-space-sm r=474",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506",
+   "span.material-symbols-outlined.text-on-surface-variant.text-[16px] r=444",
+   "span.font-label-md.text-label-md.text-on-surface-variant r=498"
+  ],
+  "nSmall": 8,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28"
+  ],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "admin.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 12,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 56x32",
+   "button[download\nExport CS] 174x34",
+   "button[sync\nSync SIS Ledg] 158x34",
+   "button[restart_alt\nReset ] 165x34"
+  ],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "admin.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 12,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[download\nExport CS] 174x34",
+   "button[sync\nSync SIS Ledg] 158x34",
+   "button[restart_alt\nReset ] 165x34"
+  ],
+  "fs16": [],
+  "errors": []
+ },
+ {
+  "page": "document-queue.html",
+  "w": 320,
+  "overflow": true,
+  "sw": 507,
+  "nOff": 80,
+  "offenders": [
+   "header.fixed.top-0.left-72 r=336",
+   "div.flex.items-center.gap-space-sm r=474",
+   "img.h-8.w-auto.object-contain r=344",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506"
+  ],
+  "nSmall": 11,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[print\nReleasing Ma] 93x40",
+   "button[download\nExport CS] 76x40",
+   "button[chevron_left] 32x40"
+  ],
+  "fs16": [
+   "input#queueSearchInput:14px",
+   "select#docTypeSelect:12px",
+   "select#fulfillmentSelect:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "document-queue.html",
+  "w": 390,
+  "overflow": true,
+  "sw": 507,
+  "nOff": 50,
+  "offenders": [
+   "div.flex.items-center.gap-space-sm r=474",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506",
+   "span.material-symbols-outlined.text-on-surface-variant.text-[16px] r=444",
+   "span.font-label-md.text-label-md.text-on-surface-variant r=498"
+  ],
+  "nSmall": 26,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "input[queueSearchInput] 52x42",
+   "select[All Document Types] 210x37",
+   "select[All Delivery Modes] 190x37",
+   "button[print\nReleasing Ma] 93x40",
+   "button[download\nExport CS] 76x40",
+   "input[selectAllCheckbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "button[chevron_left] 32x40",
+   "button[chevron_right] 32x40",
+   "button[Print Waybills\npri] 68x28"
+  ],
+  "fs16": [
+   "input#queueSearchInput:14px",
+   "select#docTypeSelect:12px",
+   "select#fulfillmentSelect:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "document-queue.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 29,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 56x32",
+   "input[queueSearchInput] 400x42",
+   "select[All Document Types] 400x37",
+   "select[All Delivery Modes] 400x37",
+   "button[PROCESSING (0)] 106x40",
+   "button[print\nReleasing Ma] 93x40",
+   "button[download\nExport CS] 76x40",
+   "input[selectAllCheckbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "button[chevron_left] 32x40",
+   "button[chevron_right] 32x40",
+   "button[Manage Stamping\nar] 124x14",
+   "button[Print Waybills\npri] 101x14"
+  ],
+  "fs16": [
+   "input#queueSearchInput:14px",
+   "select#docTypeSelect:12px",
+   "select#fulfillmentSelect:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "document-queue.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 37,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[sync\nSync Real-Tim] 175x34",
+   "button[verified_user\nBatc] 154x34",
+   "input[queueSearchInput] 432x42",
+   "select[All Document Types] 215x37",
+   "select[All Delivery Modes] 217x37",
+   "button[ALL REQUESTS (9)] 127x26",
+   "button[PROCESSING (0)] 125x26",
+   "button[READY FOR RELEASIN] 188x26",
+   "button[NEEDS REVIEW (1)] 136x26",
+   "button[print\nReleasing Ma] 148x28",
+   "button[download\nExport CS] 103x28",
+   "input[selectAllCheckbox] 16x16",
+   "input[checkbox] 16x16",
+   "button[check\nApprove] 88x28",
+   "button[close\nDecline] 82x28",
+   "button[task_alt\nComplete] 112x28",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "input[checkbox] 16x16",
+   "button[chevron_left] 32x40",
+   "button[chevron_right] 32x40",
+   "button[Manage Stamping\nar] 124x14",
+   "button[Print Waybills\npri] 95x28"
+  ],
+  "fs16": [
+   "input#queueSearchInput:14px",
+   "select#docTypeSelect:12px",
+   "select#fulfillmentSelect:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "add-drop.html",
+  "w": 320,
+  "overflow": true,
+  "sw": 868,
+  "nOff": 92,
+  "offenders": [
+   "header.fixed.top-0.left-72 r=336",
+   "div.flex.items-center.gap-space-sm r=474",
+   "img.h-8.w-auto.object-contain r=344",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506"
+  ],
+  "nSmall": 13,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[close\nDecline] 100x34",
+   "button[check\nApprove & Co] 211x34",
+   "button[task_alt\nComplete] 114x34",
+   "button[chevron_left] 32x32",
+   "button[1] 32x32"
+  ],
+  "fs16": [
+   "input#ledger-search-input:14px",
+   "select#:12px",
+   "select#:12px",
+   "textarea#:14px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "add-drop.html",
+  "w": 390,
+  "overflow": true,
+  "sw": 868,
+  "nOff": 52,
+  "offenders": [
+   "div.flex.items-center.gap-space-sm r=474",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506",
+   "span.material-symbols-outlined.text-on-surface-variant.text-[16px] r=444",
+   "span.font-label-md.text-label-md.text-on-surface-variant r=498"
+  ],
+  "nSmall": 18,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "input[ledger-search-inpu] 56x42",
+   "select[All Colleges\nColle] 321x37",
+   "button[Add/Drop & Enrollm] 193x28",
+   "button[close\nDecline] 100x34",
+   "button[check\nApprove & Co] 211x34",
+   "button[task_alt\nComplete] 114x34",
+   "textarea[textarea] 16x90",
+   "button[chevron_left] 32x32",
+   "button[1] 32x32",
+   "button[chevron_right] 32x32"
+  ],
+  "fs16": [
+   "input#ledger-search-input:14px",
+   "select#:12px",
+   "select#:12px",
+   "textarea#:14px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "add-drop.html",
+  "w": 768,
+  "overflow": true,
+  "sw": 932,
+  "nOff": 5,
+  "offenders": [
+   "div.flex.items-center.gap-space-sm r=840",
+   "button.px-space-md.py-2.rounded-lg r=840",
+   "span. r=824",
+   "div.flex.gap-space-sm.items-center r=932",
+   "select.px-space-md.py-2.5.rounded-lg r=932"
+  ],
+  "nSmall": 26,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 56x32",
+   "button[history\nReset demo] 157x34",
+   "button[publish\nBatch SIS ] 147x34",
+   "input[ledger-search-inpu] 56x42",
+   "select[All Colleges\nColle] 321x37",
+   "select[Add/Drop & Enrollm] 219x37",
+   "button[Add/Drop & Enrollm] 193x28",
+   "button[Pending Dean Endor] 220x28",
+   "button[Registrar Authoriz] 181x28",
+   "button[attachment\nView Le] 63x36",
+   "button[close\nDecline] 100x34",
+   "button[check\nApprove & Co] 211x34",
+   "button[task_alt\nComplete] 114x34",
+   "button[Save Memo] 61x36",
+   "button[download] 32x32",
+   "button[chevron_left] 32x32",
+   "button[1] 32x32",
+   "button[chevron_right] 32x32"
+  ],
+  "fs16": [
+   "input#ledger-search-input:14px",
+   "select#:12px",
+   "select#:12px",
+   "textarea#:14px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "add-drop.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 28,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "button[history\nReset demo] 157x34",
+   "button[publish\nBatch SIS ] 147x34",
+   "input[ledger-search-inpu] 372x42",
+   "select[All Colleges\nColle] 321x37",
+   "select[Add/Drop & Enrollm] 219x37",
+   "button[Add/Drop & Enrollm] 193x28",
+   "button[Pending Dean Endor] 220x28",
+   "button[Registrar Authoriz] 181x28",
+   "button[Declined / Rejecte] 171x28",
+   "button[Shifting & Transfe] 217x28",
+   "button[attachment\nView Le] 63x36",
+   "button[close\nDecline] 100x34",
+   "button[check\nApprove & Co] 211x34",
+   "button[task_alt\nComplete] 114x34",
+   "button[Save Memo] 84x22",
+   "button[download] 32x32",
+   "button[chevron_left] 32x32",
+   "button[1] 32x32",
+   "button[chevron_right] 32x32"
+  ],
+  "fs16": [
+   "input#ledger-search-input:14px",
+   "select#:12px",
+   "select#:12px",
+   "textarea#:14px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "shifting-transfer.html",
+  "w": 320,
+  "overflow": true,
+  "sw": 558,
+  "nOff": 234,
+  "offenders": [
+   "header.fixed.top-0.left-72 r=336",
+   "div.flex.items-center.gap-space-sm r=474",
+   "img.h-8.w-auto.object-contain r=344",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506"
+  ],
+  "nSmall": 10,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[chevron_left] 32x32",
+   "button[Cancel] 74x32"
+  ],
+  "fs16": [
+   "input#table-search:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "shifting-transfer.html",
+  "w": 390,
+  "overflow": true,
+  "sw": 558,
+  "nOff": 80,
+  "offenders": [
+   "div.flex.items-center.gap-space-sm r=474",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506",
+   "span.material-symbols-outlined.text-on-surface-variant.text-[16px] r=444",
+   "span.font-label-md.text-label-md.text-on-surface-variant r=498"
+  ],
+  "nSmall": 18,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "input[table-search] 56x42",
+   "select[All Evaluators\nCAS] 183x36",
+   "button[filter_list\nFilter] 86x38",
+   "button[Add/Drop & Enrollm] 154x26",
+   "button[chevron_left] 32x32",
+   "button[chevron_right] 32x32",
+   "button[verified_user\nSign] 22x68",
+   "button[report_problem\nIss] 22x64",
+   "button[Cancel] 74x32",
+   "button[Authorize & Update] 226x32"
+  ],
+  "fs16": [
+   "input#table-search:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "shifting-transfer.html",
+  "w": 768,
+  "overflow": false,
+  "sw": 768,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 21,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 56x32",
+   "input[table-search] 400x42",
+   "select[All Evaluators\nCAS] 183x36",
+   "button[filter_list\nFilter] 86x38",
+   "button[Add/Drop & Enrollm] 154x26",
+   "button[Shifting & Transfe] 216x28",
+   "button[Credit Validation ] 205x26",
+   "button[chevron_left] 32x32",
+   "button[chevron_right] 32x32",
+   "button[verified_user\nSign] 400x38",
+   "button[report_problem\nIss] 400x34",
+   "button[Cancel] 74x32",
+   "button[Authorize & Update] 226x32"
+  ],
+  "fs16": [
+   "input#table-search:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "shifting-transfer.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 26,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "input[table-search] 631x42",
+   "select[All Evaluators\nCAS] 183x36",
+   "button[filter_list\nFilter] 86x38",
+   "button[Add/Drop & Enrollm] 154x26",
+   "button[Shifting & Transfe] 216x28",
+   "button[Credit Validation ] 205x26",
+   "button[LOA & Readmission] 131x26",
+   "button[Graduation & Verif] 167x26",
+   "button[check\nApprove] 92x28",
+   "button[close\nDecline] 86x28",
+   "button[Complete] 84x28",
+   "button[chevron_left] 32x32",
+   "button[chevron_right] 32x32",
+   "button[verified_user\nSign] 267x38",
+   "button[report_problem\nIss] 267x34",
+   "button[Cancel] 74x32",
+   "button[Authorize & Update] 226x32"
+  ],
+  "fs16": [
+   "input#table-search:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "graduation-verification.html",
+  "w": 320,
+  "overflow": true,
+  "sw": 753,
+  "nOff": 141,
+  "offenders": [
+   "header.fixed.top-0.left-72 r=336",
+   "div.flex.items-center.gap-space-sm r=474",
+   "img.h-8.w-auto.object-contain r=344",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506"
+  ],
+  "nSmall": 8,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28"
+  ],
+  "fs16": [
+   "input#:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "graduation-verification.html",
+  "w": 390,
+  "overflow": true,
+  "sw": 753,
+  "nOff": 33,
+  "offenders": [
+   "div.flex.items-center.gap-space-sm r=474",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506",
+   "span.material-symbols-outlined.text-on-surface-variant.text-[16px] r=444",
+   "span.font-label-md.text-label-md.text-on-surface-variant r=498"
+  ],
+  "nSmall": 11,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "input[text] 60x42",
+   "select[All Colleges (Engi] 377x37",
+   "button[Add/Drop & Enrollm] 175x28"
+  ],
+  "fs16": [
+   "input#:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "graduation-verification.html",
+  "w": 768,
+  "overflow": true,
+  "sw": 774,
+  "nOff": 2,
+  "offenders": [
+   "div.flex.items-center.gap-space-sm r=774",
+   "button.px-space-md.py-2.bg-primary r=774"
+  ],
+  "nSmall": 18,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 56x32",
+   "input[text] 400x42",
+   "select[All Colleges (Engi] 377x37",
+   "button[download] 40x47",
+   "button[Add/Drop & Enrollm] 175x28",
+   "button[Shifting & Transfe] 217x28",
+   "button[Credit Validation ] 228x28",
+   "button[verified\nIssue Con] 352x34",
+   "button[print\nPrint Offici] 352x34",
+   "button[View All Cohorts\na] 93x32"
+  ],
+  "fs16": [
+   "input#:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "graduation-verification.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 26,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "input[text] 479x42",
+   "select[All Colleges (Engi] 377x37",
+   "button[download] 40x47",
+   "button[Add/Drop & Enrollm] 175x28",
+   "button[Shifting & Transfe] 217x28",
+   "button[Credit Validation ] 228x28",
+   "button[LOA & Readmission] 153x28",
+   "button[school\nGraduation ] 211x28",
+   "button[check\nApprove] 96x28",
+   "button[close\nDecline] 90x28",
+   "button[Complete] 92x28",
+   "button[verified\nIssue Con] 288x34",
+   "button[print\nPrint Offici] 288x34",
+   "button[View All Cohorts\na] 123x16",
+   "button[Review] 68x24",
+   "button[Review] 68x24",
+   "button[Resolve] 72x24"
+  ],
+  "fs16": [
+   "input#:14px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "loa-readmission.html",
+  "w": 320,
+  "overflow": true,
+  "sw": 785,
+  "nOff": 196,
+  "offenders": [
+   "header.fixed.top-0.left-72 r=336",
+   "div.flex.items-center.gap-space-sm r=474",
+   "img.h-8.w-auto.object-contain r=344",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506"
+  ],
+  "nSmall": 10,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "a[Academic Residency] 61x42",
+   "a[Data Privacy Compl] 69x42"
+  ],
+  "fs16": [
+   "input#ledgerSearchInput:14px",
+   "select#:12px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "loa-readmission.html",
+  "w": 390,
+  "overflow": true,
+  "sw": 785,
+  "nOff": 96,
+  "offenders": [
+   "div.flex.items-center.gap-space-sm r=474",
+   "span.font-headline-sm.text-headline-sm.text-primary r=399",
+   "span.text-outline-variant r=412",
+   "div.flex.items-center.gap-space-xs r=506",
+   "span.material-symbols-outlined.text-on-surface-variant.text-[16px] r=444",
+   "span.font-label-md.text-label-md.text-on-surface-variant r=498"
+  ],
+  "nSmall": 16,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "input[ledgerSearchInput] 56x42",
+   "select[LOA & Readmission\n] 181x37",
+   "button[description\nPrint ] 32x100",
+   "button[badge\nIssue Certif] 32x84",
+   "button[verified_user\nExpo] 32x84",
+   "button[task_alt\nFinalize ] 22x100",
+   "a[Academic Residency] 61x42",
+   "a[Data Privacy Compl] 69x42"
+  ],
+  "fs16": [
+   "input#ledgerSearchInput:14px",
+   "select#:12px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "loa-readmission.html",
+  "w": 768,
+  "overflow": true,
+  "sw": 849,
+  "nOff": 2,
+  "offenders": [
+   "div.flex.items-center.gap-space-sm r=849",
+   "select.px-space-md.py-2.5.rounded-lg r=849"
+  ],
+  "nSmall": 29,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 56x32",
+   "button[history\nReset demo] 157x34",
+   "button[add_circle\nInitiat] 227x34",
+   "a[Add/Drop & Enrollm] 159x28",
+   "a[Shifting & Transfe] 201x28",
+   "a[Credit Validation ] 212x28",
+   "a[LOA & Readmission] 153x28",
+   "a[Graduation & Verif] 173x28",
+   "input[ledgerSearchInput] 56x42",
+   "select[LOA & Readmission\n] 181x37",
+   "select[All Colleges & Uni] 268x37",
+   "button[Returnee Applicati] 131x36",
+   "button[Active Leaves (0)] 97x36",
+   "button[Archive (0)] 70x36",
+   "button[description\nPrint ] 400x38",
+   "button[badge\nIssue Certif] 400x38",
+   "button[verified_user\nExpo] 400x38",
+   "button[task_alt\nFinalize ] 400x40",
+   "a[Academic Residency] 61x42",
+   "a[Data Privacy Compl] 69x42",
+   "a[Audit Protocol] 51x28"
+  ],
+  "fs16": [
+   "input#ledgerSearchInput:14px",
+   "select#:12px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ },
+ {
+  "page": "loa-readmission.html",
+  "w": 1280,
+  "overflow": false,
+  "sw": 1280,
+  "nOff": 0,
+  "offenders": [],
+  "nSmall": 31,
+  "small": [
+   "a[analytics\nDashboar] 256x38",
+   "a[description\nDocume] 256x38",
+   "a[swap_calls\nAdd/Dro] 256x38",
+   "a[move_up\nShifting &] 256x38",
+   "a[school\nGraduation ] 256x38",
+   "a[pause_circle\nLOA &] 256x38",
+   "button[notifications] 28x28",
+   "button[settings] 28x28",
+   "button[logout\nSign Out] 75x18",
+   "a[Add/Drop & Enrollm] 159x28",
+   "a[Shifting & Transfe] 201x28",
+   "a[Credit Validation ] 212x28",
+   "a[LOA & Readmission] 153x28",
+   "a[Graduation & Verif] 173x28",
+   "input[ledgerSearchInput] 447x42",
+   "select[LOA & Readmission\n] 181x37",
+   "select[All Colleges & Uni] 268x37",
+   "button[All Requests (1)] 115x22",
+   "button[Returnee Applicati] 170x22",
+   "button[Active Leaves (0)] 124x22",
+   "button[Archive (0)] 87x22",
+   "button[check\nApprove] 96x28",
+   "button[close\nDecline] 90x28",
+   "button[Complete] 92x28",
+   "button[description\nPrint ] 267x38",
+   "button[badge\nIssue Certif] 267x38",
+   "button[verified_user\nExpo] 267x38",
+   "button[task_alt\nFinalize ] 267x40",
+   "a[Academic Residency] 132x28",
+   "a[Data Privacy Compl] 126x28",
+   "a[Audit Protocol] 74x28"
+  ],
+  "fs16": [
+   "input#ledgerSearchInput:14px",
+   "select#:12px",
+   "select#:12px"
+  ],
+  "errors": [
+   "TypeError: Cannot read properties of null (reading 'addEventListener')"
+  ]
+ }
+]
